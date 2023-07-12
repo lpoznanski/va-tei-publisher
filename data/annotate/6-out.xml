@@ -1,0 +1,58 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="en">
+      <fileDesc>
+         <titleStmt>
+            <title>6</title>
+            <author>Monumenta Vaticana</author>
+         </titleStmt>
+         <editionStmt>
+            <edition>Wersja cyfrowa tekstu</edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Centrum Studiów Mediewistycznych</publisher>
+            <pubPlace>
+               <placeName>Lublin</placeName>
+            </pubPlace>
+            <date/>
+            <availability status="free">
+               <licence>CC BY-NC-ND</licence>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Monumenta Vaticana res gestes Polonicas Illustrantia</title>
+         </seriesStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <msName type="kopia">cop.: ASV, Reg. Lat., vol. 45, f. 197v</msName>
+               </msIdentifier>
+               <msContents>
+                  <msItem>
+                     <note>error_not_found</note>
+                  <bibl type="none">error_not_found</bibl></msItem>
+               </msContents>
+            </msDesc>
+            <listPerson>
+               <person/>
+            </listPerson>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <abstract>
+         <p>Papież Bonifacy IX zezwala Małgorzacie, wdowie po Mikołaju Kruczborgu, na wybór własnego spowiednika, który będzie mógł udzielać jej absolucji od grzechów niezastrzeżonych dla Stolicy Apostolskiej.</p></abstract>
+         <textClass/>
+         <creation>
+            <date>18 martii 1397</date>
+            <placeName ana="Rzym">Roma</placeName>
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <!-- tutaj trzeba oddać znacznikami nieustandaryzowanymi formatowanie tekstu i takze przypisy. Problem jest taki, że MDK konsekwentnie nie wykorzystywa "stylów", więc trzeba wymyślić, jak wyciągnąć, formatowanie bez stylów (jeśli coś jest kursywą, to w stylach jest to jako tekst normalny - chociaż w formatowaniu jest kursywa, albo pomniejszenie). To jest bardzo ważne. NIE MOŻEMY ZGUBIĆ FORMATOWANIA!!!Tzn. tam gdzie jest kursywa w docx powinien być zaznaczony tag <kursywa>, przypisy można dać w miejscu, gdzie występiuja w tekście w znaczniku <przypis>. Jeśli by się tego nie dało, to można je też dać na końcu, ale wolałbym mieć w miejscu, gdzie występują. -->
+      <body>
+         <div>
+            <p><persName ref="va-Q10">Bonifacius </persName>etc., Następuje skreślone: dilecto filio. dilecte in Christo filie <persName ref="va-Q46">Margarite, relicte quondam <persName ref="va-Q47">Nicolai Cruczeburcg laici, vidue Wladislauiensis diocesis</persName></persName>, salutem etc. Benigno etc. <app><lem>[Hinc est, quod nos .... tibi auctoritate apostolica indulgemus, ut aliquem .... presbyterum in tuum possis eligere confessorem, qui, quotiens tibi fuerit oportunum, confessionibus tuis diligenter auditis pro commissis debitam tibi absolucionem impendat et iniungat penitenciam salutarem, nisi forsan talia fuerint propter que Sedes Apostolica sit merito consulenda. ....]</lem><rdg wit="org">om.</rdg></app> Datum <placeName ref="va-Q31">Rome apud Sanctum Petrum</placeName>, <date when="1397-03-18">decimo quinto kal. aprilis, anno octavo</date>. [alia manu:] <persName ref="va-Q30">N(icolaus). X. de Ben(even)to</persName>. </p>
+         </div>
+      </body>
+   </text>
+</TEI>
