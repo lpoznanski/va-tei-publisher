@@ -15,16 +15,77 @@ declare variable $anno:local-authority-file := $config:data-root || "/register.x
 declare function anno:annotations($type as xs:string, $properties as map(*)?, $content as function(*)) {
     switch ($type)
         case "person" return
-            <persName xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}">{$content()}</persName>
+            <persName xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}">{$content()}
+                {
+                    for $prop in map:keys($properties)[starts-with(., 'ad')]
+                    return
+                        <ref type="{$properties?ad-type}" ref="{$properties?ad-ref}"/>
+                }
+                {
+                    for $prop in map:keys($properties)[starts-with(., 'ad2')]
+                    return
+                        <ref type="{$properties?ad2-type}" ref="{$properties?ad2-ref}"/>
+                }
+                {
+                    for $prop in map:keys($properties)[starts-with(., 'ad3')]
+                    return
+                        <ref type="{$properties?ad3-type}" ref="{$properties?ad3-ref}"/>
+                }
+            </persName>
+        case "rolename" return
+            <roleName xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}">
+            {
+                for $prop in map:keys($properties)[. = ('type')]
+                return
+                    attribute { $prop } { $properties($prop) },
+                $content()
+            }
+            </roleName>
+        case "education" return
+            <education xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}">
+            {
+                for $prop in map:keys($properties)[. = ('type')]
+                return
+                    attribute { $prop } { $properties($prop) },
+                $content()
+            }
+            </education>
+(:        case "education" return:)
+(:            <education xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}">{$content()}</education>   :)
+        case "affiliation" return
+            <affiliation xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}">{$content()}</affiliation>
+        case "event" return
+            <event xmlns="http://www.tei-c.org/ns/1.0">{$content()}</event>
+        case "settlement" return
+            <settlement xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}">{$content()}</settlement>
+        case "district" return
+            <district xmlns="http://www.tei-c.org/ns/1.0">{$content()}</district>
+        case "region" return
+            <region xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}">{$content()}</region>
+        case "country" return
+            <country xmlns="http://www.tei-c.org/ns/1.0">{$content()}</country>
+        case "measure" return
+            <measure xmlns="http://www.tei-c.org/ns/1.0">
+            {
+                if ($properties?unit) then attribute unit { $properties?unit } else (),
+                if ($properties?quantity) then attribute quantity { $properties?quantity } else (),
+                if ($properties?unit) then attribute commodity { $properties?commodity } else (),
+                $content()
+            }
+            </measure>
+(:        case "currency" return:)
+(:            <currency xmlns="http://www.tei-c.org/ns/1.0">{$content()}</currency>:)
+(:        case "num" return:)
+(:            <num xmlns="http://www.tei-c.org/ns/1.0">{$content()}</num>:)
         case "place" return
-            <placeName xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}">{$content()}</placeName>
+            <placeName xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}">{$content()}</placeName>
         case "term" return
-            <term xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}">{$content()}</term>
+            <term xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}">{$content()}</term>
         case "organization" return
-            <orgName xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}">{$content()}</orgName>
+            <orgName xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}">{$content()}</orgName>
         case "hi" return
             <hi xmlns="http://www.tei-c.org/ns/1.0">
-            { 
+            {
                 if ($properties?rend) then attribute rend { $properties?rend } else (),
                 if ($properties?rendition) then attribute rendition { $properties?rendition } else (),
                 $content()
@@ -37,12 +98,18 @@ declare function anno:annotations($type as xs:string, $properties as map(*)?, $c
         case "reg" return
             <choice xmlns="http://www.tei-c.org/ns/1.0"><orig>{$content()}</orig><reg>{$properties?reg}</reg></choice>
         case "note" return
-            <seg xmlns="http://www.tei-c.org/ns/1.0" type="annotated">{$content()}
-            <note xmlns="http://www.tei-c.org/ns/1.0" type="annotation">{$properties?note}</note></seg>
+            <note xmlns="http://www.tei-c.org/ns/1.0">
+            {
+                for $prop in map:keys($properties)[. = ('type', 'place')]
+                return
+                    attribute { $prop } { $properties($prop) },
+                $content()
+            }
+            </note>
         case "date" return
             <date xmlns="http://www.tei-c.org/ns/1.0">
             {
-                for $prop in map:keys($properties)[. = ('when', 'from', 'to')]
+                for $prop in map:keys($properties)[. = ('when', 'from', 'to', 'type')]
                 return
                     attribute { $prop } { $properties($prop) },
                 $content()
@@ -57,10 +124,39 @@ declare function anno:annotations($type as xs:string, $properties as map(*)?, $c
                     order by number($n)
                     return
                         <rdg wit="{$properties('wit[' || $n || ']')}">{$properties($prop)}</rdg>
+
+                }
+                {
+                    for $prop in map:keys($properties)[starts-with(., 'detail')]
+                    let $n := replace($prop, "^.*\[(.*)\]$", "$1")
+                    order by number($n)
+                    return
+                        <witDetail>{$properties($prop)}</witDetail>
                 }
             </app>
+        case "pb" return
+            ($content(), <pb xmlns="http://www.tei-c.org/ns/1.0"/>)
+        case "handShift" return
+            ($content(), <handShift xmlns="http://www.tei-c.org/ns/1.0"/>)
+        case "del" return
+            <del xmlns="http://www.tei-c.org/ns/1.0">{$content()}</del>
+        case "add" return
+            <add xmlns="http://www.tei-c.org/ns/1.0">{$content()}</add>
+        case "section" return
+            <section xmlns="http://www.tei-c.org/ns/1.0">
+            {
+                for $prop in map:keys($properties)[. = ('type')]
+                return
+                    attribute { $prop } { $properties($prop) },
+                $content()
+            }
+            </section>
         case "link" return
             <ref xmlns="http://www.tei-c.org/ns/1.0" target="{$properties?target}">{$content()}</ref>
+        case "state" return
+            <state xmlns="http://www.tei-c.org/ns/1.0">{$content()}</state>
+        case "ref" return
+            ($content(), <ref xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}"/>)
         case "edit" return
             $properties?content
         default return
@@ -83,7 +179,19 @@ declare function anno:occurrences($type as xs:string, $key as xs:string) {
             collection($config:data-default)//tei:term[@ref = $key]
         case "organization" return
             collection($config:data-default)//tei:orgName[@ref = $key]
-         default return ()
+        case "affiliation" return
+            collection($config:data-default)//tei:affiliation[@ref = $key]
+        case "region" return
+            collection($config:data-default)//tei:region[@ref = $key]
+        case "settlement" return
+            collection($config:data-default)//tei:settlement[@ref = $key]
+        case "rolename" return
+            collection($config:data-default)//tei:roleName[@ref = $key]
+        case "education" return
+            collection($config:data-default)//tei:education[@ref = $key]
+        case "ref" return
+            collection($config:data-default)//tei:ref[@ref = $key]
+        default return ()
 };
 
 (:~
@@ -149,7 +257,7 @@ declare function anno:create-record($type as xs:string, $id as xs:string, $data 
 };
 
 (:~
- : Query the local register for existing authority entries matching the given type and query string. 
+ : Query the local register for existing authority entries matching the given type and query string.
  :)
 declare function anno:query($type as xs:string, $query as xs:string?) {
     try {
@@ -187,6 +295,13 @@ declare function anno:query($type as xs:string, $query as xs:string?) {
                     map {
                         "id": $term/@xml:id/string(),
                         "label": $term/tei:catDesc/string()
+                    }
+            case "affiliation" return
+                for $affiliation in doc($anno:local-authority-file)//tei:affiliation[ft:query(tei:affiliation, $query)]
+                return
+                    map {
+                        "id": $affiliation/@xml:id/string(),
+                        "label": $affiliation/tei:affiliation/string()
                     }
             default return
                 ()
