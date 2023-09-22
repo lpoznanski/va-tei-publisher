@@ -35,8 +35,8 @@
                                 <!--paper-icon-button id="clear-all" icon="icons:refresh"></paper-icon-button-->
                                 <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.person" title="Person" data-type="person" data-shortcut="⌘+⇧+p,ctrl+⇧+p" icon="social:person" disabled="disabled"/>
                                 <!--testowy guzik-->
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.roleName" title="Rolename" data-type="rolename" data-shortcut="" icon="social:person-outline" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.education" title="Education" data-type="education" data-shortcut="" icon="social:school" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.roleName" title="Rolename" data-type="rolename" data-shortcut="" icon="social:person-outline" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.education" title="Education" data-type="education" data-shortcut="" icon="social:school" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.affiliation" title="Affiliation" data-type="affiliation" data-shortcut="" icon="icons:donut-large" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.event" title="Event" data-type="event" data-shortcut="" icon="maps:local-activity" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.settlement" title="Settlement" data-type="settlement" data-shortcut="" icon="social:location-city" disabled="disabled"/>
@@ -57,22 +57,24 @@
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.reg" title="Regularization" data-type="reg" icon="editor:wrap-text" data-shortcut="⌘+⇧+g,ctrl+⇧+g" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.app" title="Apparatus" data-type="app" icon="icons:visibility" data-shortcut="⌘+⇧+v,ctrl+⇧+v" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.hi" title="Highlight" data-type="hi" icon="editor:format-bold" data-shortcut="⌘+⇧+h,ctrl+⇧+h" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.pb" title="Pb" data-type="pb" icon="editor:format-bold" data-shortcut="" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.handShift" title="HandShift" data-type="handShift" icon="editor:format-bold" data-shortcut="" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.section" title="Section" data-type="section" icon="editor:format-bold" data-shortcut="" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.note" title="Note" data-type="note" icon="editor:format-bold" data-shortcut="" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.del" title="Del" data-type="del" icon="editor:format-bold" data-shortcut="" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.add" title="Add" data-type="add" icon="editor:format-bold" data-shortcut="" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.pb" title="Pb" data-type="pb" icon="icons:last-page" data-shortcut="" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.handShift" title="HandShift" data-type="handShift" icon="icons:thumb-up" data-shortcut="" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.section" title="Section" data-type="section" icon="icons:date-range" data-shortcut="" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.note" title="Note" data-type="note" icon="icons:note-add" data-shortcut="" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.del" title="Del" data-type="del" icon="icons:close" data-shortcut="" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.add" title="Add" data-type="add" icon="icons:add" data-shortcut="" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.state" title="State" data-type="state" icon="icons:cloud" data-shortcut="" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.modify" title="Edit" data-type="edit" icon="editor:mode-edit" data-shortcut="⌘+⇧+m,ctrl+⇧+m" disabled="disabled"/>
                                 <paper-icon-button id="ner-action" icon="social:group-add" data-i18n="[title]annotations.ner.title"/>
+                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.ref" title="Ref" data-type="ref" icon="icons:add-alert" data-shortcut="⌘+⇧+t,ctrl+⇧+t" disabled="disabled"/>
                             </div>
                             <iron-form id="edit-form">
                                 <form action="">
-                                    <div class="annotation-form person organization place term affiliation settlement region">
+                                    <div class="annotation-form person organization place term affiliation settlement region education rolename ref">
                                         <paper-input class="form-ref" name="ref" data-i18n="[label]annotations.reference" label="Reference">
                                             <paper-icon-button slot="prefix" icon="search" data-i18n="[label]annotations.lookup"/>
                                         </paper-input>
-                                        <div class="authority-info">
+                                        <div class="authority-info" style="width: 200px !important;">
                                             <pb-i18n key="dialogs.loading">Loading ...</pb-i18n>
                                         </div>
                                     </div>
@@ -94,6 +96,30 @@
                                             </paper-listbox>
                                         </paper-dropdown-menu>
                                     </div>
+                                    <div class="annotation-form person organization place term affiliation settlement region education rolename">
+                                        <paper-dropdown-menu name="type" label="type">
+                                            <paper-listbox slot="dropdown-content" selected="1" name="type">
+                                                <paper-item name="type">issuer</paper-item>
+                                                <paper-item name="type">recipient</paper-item>
+                                                <paper-item name="type">executor</paper-item>
+                                                <paper-item name="type">object_in_the_document</paper-item>
+                                                <paper-item name="type">document_fee</paper-item>
+                                                <paper-item name="type">magister_registri</paper-item>
+                                                <paper-item name="type">marginal_note</paper-item>
+                                                <paper-item name="type">place_of_issue</paper-item>
+                                                <paper-item name="type">document_date</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                    <div class="annotation-form ref">
+                                        <paper-dropdown-menu name="type" label="type">
+                                            <paper-listbox slot="dropdown-content" selected="1" name="type">
+                                                <paper-item name="type">posiadacz beneficjum</paper-item>
+                                                <paper-item name="type">posiadacz ekspektatywy na beneficjum</paper-item>
+                                                <paper-item name="type">rola w dokumencie</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
                                     <div class="annotation-form date">
                                         <paper-input name="when" label="when" type="date"/>
                                         <paper-input name="from" label="from" type="date"/>
@@ -101,33 +127,6 @@
                                          <paper-dropdown-menu name="type" label="type" type="date">
                                             <paper-listbox slot="dropdown-content" selected="1">
                                                 <paper-item>document_issued</paper-item>
-                                            </paper-listbox>
-                                        </paper-dropdown-menu>
-                                    </div>
-                                    <div class="annotation-form rolename">
-                                        <paper-dropdown-menu name="type" label="type" type="rolename">
-                                            <paper-listbox slot="dropdown-content" selected="1">
-                                                <paper-item>cleric</paper-item>
-                                                <paper-item>deacon</paper-item>
-                                                <paper-item>presbyter</paper-item>
-                                                <paper-item>bishop</paper-item>
-                                            </paper-listbox>
-                                        </paper-dropdown-menu>
-                                    </div>
-                                    <div class="annotation-form education">
-                                        <paper-dropdown-menu name="type" label="type" type="education">
-                                            <paper-listbox slot="dropdown-content" selected="1">
-                                                <paper-item>scholar</paper-item>
-                                                <paper-item>bachalor_arts</paper-item>
-                                                <paper-item>master_arts</paper-item>
-                                                <paper-item>bachalor_Bible</paper-item>
-                                                <paper-item>bachelor_Sentences</paper-item>
-                                                <paper-item>master_theology</paper-item>
-                                                <paper-item>bachalor_civil_law</paper-item>
-                                                <paper-item>master_civil_law</paper-item>
-                                                <paper-item>bachalor_canon_law</paper-item>
-                                                <paper-item>doctor_canon_law</paper-item>
-                                                <paper-item>master_utriusque</paper-item>
                                             </paper-listbox>
                                         </paper-dropdown-menu>
                                     </div>
@@ -150,7 +149,7 @@
                                         <template>
                                             <paper-input name="wit" label="wit"/>
                                             <paper-input name="rdg" label="rdg"/>
-                                            <paper-input name="witDetail" label="witDetail"/>
+                                            <paper-input name="detail" label="witDetail"/>
                                         </template>
                                     </pb-repeat>
                                     <paper-input class="annotation-form sic" name="corr" data-i18n="[label]annotations.correction" label="Correction"/>
@@ -228,11 +227,13 @@
                         <!--<pb-authority connector="Custom" name="person">
                             <pb-authority connector="GND" prefix="gnd"/>
                         </pb-authority>-->
-                        <pb-authority connector="Custom" name="person">
-                        </pb-authority>
+                        <pb-authority connector="ReconciliationService" name="person" endpoint="https://va.wiki.kul.pl/reconcile/pl/api?type_qid=Q4" debug="1" prefix="va"/>
                         <pb-authority connector="ReconciliationService" name="affiliation" endpoint="https://va.wiki.kul.pl/reconcile/pl/api?type_qid=Q5" debug="1" prefix="va"/>
                         <pb-authority connector="ReconciliationService" name="settlement" endpoint="https://va.wiki.kul.pl/reconcile/pl/api?type_qid=Q2" debug="1" prefix="va"/>
                         <pb-authority connector="ReconciliationService" name="region" endpoint="https://va.wiki.kul.pl/reconcile/pl/api?type_qid=Q9" debug="1" prefix="va"/>
+                        <pb-authority connector="ReconciliationService" name="education" endpoint="https://va.wiki.kul.pl/reconcile/pl/api" debug="1" prefix="va"/>
+                        <pb-authority connector="ReconciliationService" name="rolename" endpoint="https://va.wiki.kul.pl/reconcile/pl/api" debug="1" prefix="va"/>
+                        <pb-authority connector="ReconciliationService" name="ref" endpoint="https://va.wiki.kul.pl/reconcile/pl/api" debug="1" prefix="va"/>
                     </pb-authority-lookup>
                 </paper-dialog-scrollable>
                 <div class="buttons">

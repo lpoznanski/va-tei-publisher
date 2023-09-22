@@ -1,7 +1,7 @@
 /*
  * This file contains the javascript code, which connects the various elements of the
  * user interface for the annotation editor.
- * 
+ *
  * You should not need to change this unless you want to add new features.
  */
 
@@ -86,6 +86,7 @@ window.addEventListener("WebComponentsReady", () => {
 	const occurrences = occurDiv.querySelector("ul");
 	const saveBtn = document.getElementById("form-save");
 	const refInput = document.querySelectorAll(".form-ref");
+	const refinput2 = document.querySelectorAll(".form-ref2")
 	const authorityDialog = document.getElementById("authority-dialog");
 	const nerDialog = document.getElementById("ner-dialog");
 	let autoSave = false;
@@ -142,6 +143,7 @@ window.addEventListener("WebComponentsReady", () => {
 	function authoritySelected(data) {
 		authorityDialog.close();
 		refInput.forEach((input) => { input.value = data.properties.ref });
+		refInput2.forEach((input) => { input.value = data.properties.ad-ref });
 		if (autoSave) {
 			save();
 		}
@@ -149,11 +151,11 @@ window.addEventListener("WebComponentsReady", () => {
 
 	/**
 	 * Called if user selects or deselects an occurrence
-	 * 
+	 *
 	 * @param {any} data form data
 	 * @param {any} o range data associated with the selected occurrence
 	 * @param {boolean} inBatch true if this is a batch operation
-	 * @returns 
+	 * @returns
 	 */
 	function selectOccurrence(data, o, inBatch) {
 		try {
@@ -334,9 +336,9 @@ window.addEventListener("WebComponentsReady", () => {
 
 	/**
 	 * Handler called if user clicks on an annotation action.
-	 * 
+	 *
 	 * @param {HTMLButton} button the button
-	 * @returns 
+	 * @returns
 	 */
 	function actionHandler(button) {
 		if (selection) {
@@ -347,7 +349,7 @@ window.addEventListener("WebComponentsReady", () => {
 			}
 			autoSave = false;
 			if (button.classList.contains("authority")) {
-				autoSave = true;
+				// autoSave = true;
 				window.pbEvents.emit("pb-authority-lookup", "transcription", {
 					type,
 					query: selection,
@@ -363,7 +365,7 @@ window.addEventListener("WebComponentsReady", () => {
 
 	/**
 	 * Handler called if user clicks the mark-all occurrences button.
-	 * 
+	 *
 	 * @param {Event} ev event
 	 */
 	function markAll(ev) {
@@ -552,6 +554,16 @@ window.addEventListener("WebComponentsReady", () => {
 		});
 	});
 
+	document.querySelectorAll('.form-ref2 [slot="prefix"]').forEach(elem => {
+		elem.addEventListener("click", () => {
+			window.pbEvents.emit("pb-authority-lookup", "transcription", {
+				type,
+				query: text,
+			});
+			authorityDialog.open();
+		});
+	});
+
 	// check if annotations were saved to local storage
 	const doc = view.getDocument();
 	if (doc && doc.path) {
@@ -638,7 +650,7 @@ window.addEventListener("WebComponentsReady", () => {
 			window.localStorage.setItem(`tei-publisher.annotations.${doc.path}.history`, JSON.stringify(view.getHistory()));
 		}
 	});
-	
+
 	window.pbEvents.subscribe("pb-annotation-edit", "transcription", (ev) => {
 		activeSpan = ev.detail.target;
 		text = activeSpan.textContent.replace(/\s+/g, " ");
@@ -646,7 +658,7 @@ window.addEventListener("WebComponentsReady", () => {
 		autoSave = false;
 		const trigger = document.querySelector(`[data-type=${type}]`);
 		if (trigger && trigger.classList.contains("authority")) {
-			autoSave = true;
+			// autoSave = true;
 			window.pbEvents.emit("pb-authority-lookup", "transcription", {
 				type,
 				query: text,
