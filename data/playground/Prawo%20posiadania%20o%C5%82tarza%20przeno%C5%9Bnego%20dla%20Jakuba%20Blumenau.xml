@@ -1,0 +1,33 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Prawo posiadania ołtarza przenośnego dla Jakuba Blumenau</title>
+            
+         </titleStmt>
+         <publicationStmt>
+            <p>Bulla Bonifacego IX z dnia 13 grudnia 1394</p>
+            <p>transza3</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>AAV, Reg. Lat., vol. 34, f. 220v </p>
+         </sourceDesc>
+      </fileDesc>
+     <profileDesc>
+        <abstract>
+           <p>Papież Bonifacy IX udziela prezbiterowi Jakubowi Blumenau przywileju posiadania ołtarza przenośnego [wpis przekreślony].</p>
+        </abstract>
+        <textClass ana="bulla"/>
+        <creation>
+           <date when="1394-12-13">13 decembris 1394</date>
+           <placeName ana="Rzym">Roma</placeName>
+        </creation>
+     </profileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <p>Some text here.</p>
+      </body>
+  </text>
+</TEI>

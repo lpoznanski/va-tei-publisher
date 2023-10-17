@@ -63,14 +63,14 @@
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.note" title="Note" data-type="note" icon="icons:note-add" data-shortcut="" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.del" title="Del" data-type="del" icon="icons:close" data-shortcut="" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.add" title="Add" data-type="add" icon="icons:add" data-shortcut="" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.state" title="State" data-type="state" icon="icons:cloud" data-shortcut="" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.state" title="State" data-type="state" icon="icons:cloud" data-shortcut="" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.modify" title="Edit" data-type="edit" icon="editor:mode-edit" data-shortcut="⌘+⇧+m,ctrl+⇧+m" disabled="disabled"/>
                                 <paper-icon-button id="ner-action" icon="social:group-add" data-i18n="[title]annotations.ner.title"/>
                                 <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.ref" title="Ref" data-type="ref" icon="icons:add-alert" data-shortcut="⌘+⇧+t,ctrl+⇧+t" disabled="disabled"/>
                             </div>
                             <iron-form id="edit-form">
                                 <form action="">
-                                    <div class="annotation-form person organization place term affiliation settlement region education rolename ref">
+                                    <div class="annotation-form person organization place term affiliation settlement region education rolename state ref">
                                         <paper-input class="form-ref" name="ref" data-i18n="[label]annotations.reference" label="Reference">
                                             <paper-icon-button slot="prefix" icon="search" data-i18n="[label]annotations.lookup"/>
                                         </paper-input>
@@ -96,27 +96,33 @@
                                             </paper-listbox>
                                         </paper-dropdown-menu>
                                     </div>
-                                    <div class="annotation-form person organization place term affiliation settlement region education rolename">
+                                    <div class="annotation-form person organization place term affiliation settlement region education rolename state ref">
                                         <paper-dropdown-menu name="type" label="type">
                                             <paper-listbox slot="dropdown-content" selected="1" name="type">
-                                                <paper-item name="type">issuer</paper-item>
-                                                <paper-item name="type">recipient</paper-item>
-                                                <paper-item name="type">executor</paper-item>
-                                                <paper-item name="type">object_in_the_document</paper-item>
-                                                <paper-item name="type">document_fee</paper-item>
-                                                <paper-item name="type">magister_registri</paper-item>
-                                                <paper-item name="type">marginal_note</paper-item>
-                                                <paper-item name="type">place_of_issue</paper-item>
-                                                <paper-item name="type">document_date</paper-item>
-                                            </paper-listbox>
-                                        </paper-dropdown-menu>
-                                    </div>
-                                    <div class="annotation-form ref">
-                                        <paper-dropdown-menu name="type" label="type">
-                                            <paper-listbox slot="dropdown-content" selected="1" name="type">
-                                                <paper-item name="type">posiadacz beneficjum</paper-item>
-                                                <paper-item name="type">posiadacz ekspektatywy na beneficjum</paper-item>
-                                                <paper-item name="type">rola w dokumencie</paper-item>
+                                                <paper-item name="type">wystawca</paper-item>
+                                                <paper-item name="type">odbiorca</paper-item>
+                                                <paper-item name="type">egzekutor</paper-item>
+                                                <paper-item name="type">taksa_dokumentu</paper-item>
+                                                <paper-item name="type">magister_registrów</paper-item>
+                                                <paper-item name="type">nota_marginalna</paper-item>
+                                                <paper-item name="type">miejsce_wystawienia_dokumentu</paper-item>
+                                                <paper-item name="type">data_dokumentu</paper-item>
+                                                <paper-item name="type">beneficjent_łaski</paper-item> 
+                                                <paper-item name="type">posiadane_beneficjum</paper-item>
+                                                <paper-item name="type">posiadana_ekspektatywa_na_beneficjum</paper-item>
+                                                <paper-item name="type">education</paper-item>
+                                                <paper-item name="type">przedmiot_nadania</paper-item>
+                                                <paper-item name="type">osoba_w_sporze</paper-item>
+                                                <paper-item name="type">zmarły_w_kurii</paper-item>
+                                                <paper-item name="type">rezygnacja_z_beneficjum</paper-item>
+                                                <paper-item name="type">mąż</paper-item>
+                                                <paper-item name="type">ojciec</paper-item>
+                                                <paper-item name="type">żona</paper-item>
+                                                <paper-item name="type">dziecko</paper-item>
+                                                <paper-item name="type">nepos</paper-item>
+                                                <paper-item name="type">familiaris</paper-item>
+                                                <paper-item name="type">tytulatura</paper-item>
+                                                <paper-item name="type">obiekt_występujący_w_dokumencie</paper-item>
                                             </paper-listbox>
                                         </paper-dropdown-menu>
                                     </div>
@@ -233,6 +239,7 @@
                         <pb-authority connector="ReconciliationService" name="region" endpoint="https://va.wiki.kul.pl/reconcile/pl/api?type_qid=Q9" debug="1" prefix="va"/>
                         <pb-authority connector="ReconciliationService" name="education" endpoint="https://va.wiki.kul.pl/reconcile/pl/api" debug="1" prefix="va"/>
                         <pb-authority connector="ReconciliationService" name="rolename" endpoint="https://va.wiki.kul.pl/reconcile/pl/api" debug="1" prefix="va"/>
+                        <pb-authority connector="ReconciliationService" name="state" endpoint="https://va.wiki.kul.pl/reconcile/pl/api" debug="1" prefix="va"/>
                         <pb-authority connector="ReconciliationService" name="ref" endpoint="https://va.wiki.kul.pl/reconcile/pl/api" debug="1" prefix="va"/>
                     </pb-authority-lookup>
                 </paper-dialog-scrollable>

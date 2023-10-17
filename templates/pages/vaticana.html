@@ -14,6 +14,13 @@
         <link rel="stylesheet" href="resources/css/theme.css"/>
         <script type="module" src="pb-components-bundle.js" data-template="pages:load-components"/>
         <style>
+            main {
+                display: grid;
+                height: calc(100vh - 128px);
+                grid-template-columns: 420px 1fr;
+                grid-template-rows: auto 1fr auto;
+            }
+            
             @media (min-width: 769px) {
                 .toolbar pb-navigation {
                     display: none;
@@ -26,9 +33,21 @@
                 display: flex;
                 justify-content: center;
             }
+            
             #metadata {
                 flex: 1 1;
             }
+            
+            .breadcrumbs {
+                grid-column: 2 / 2;
+            }
+            
+             #view1 {
+                grid-column: 2 / 2;
+                overflow: auto;
+                padding: 0;
+            }
+            
             .content-body pb-navigation {
                 position: fixed;
                 bottom: 45%;
@@ -79,6 +98,9 @@
                             <paper-fab icon="icons:chevron-left"/>
                         </pb-navigation>
                         <pb-view id="metadata" src="document1" xpath="//teiHeader" view="single"/>
+                        <pb-view class="breadcrumbs" src="document1" xpath="//teiHeader/fileDesc/titleStmt/title" view="single">
+                            <pb-param name="header" value="short"/>
+                        </pb-view>
                         <pb-view id="view1" src="document1" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="transcription"/>
                         <pb-navigation direction="forward" unit="page" emit="transcription" subscribe="transcription">
                             <paper-fab icon="icons:chevron-right"/>

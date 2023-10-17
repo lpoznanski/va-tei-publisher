@@ -54,10 +54,8 @@
       <body>
          <div type="doc">
             <section type="text">
-                    <persName ref="va-Q32">
-                        <persName ref="gnd-139890289">Urbanus</persName> episcopus, servus servorum Dei</persName> , dilecto filio . . <affiliation ref="va-Q45">officiali Wratislauiensi</affiliation> salutem et apostolicam benedictionem . Dilectorum filiorum . . <orgName ref="va-Q41">
-                        <affiliation ref="va-Q43">magistri</affiliation> et fratrum hospitalis pauperum Sancti Spiritus Kaliciensis, Gneznensis diocesis</orgName>, precibus inclinati, presentium tibi auctoritate mandamus, quatinus ea, que de bonis <orgName ref="va-Q41">ipsius hospitalis</orgName> alienata inveneris illicite vel distracta, ad ius et proprietatem <orgName ref="va-Q41">eiusdem hospitalis</orgName> legitime revocare procures, contradictores per censuram ecclesiasticam appellacione postposita compescendo. Testes autem, qui fuerint nominati, si se gracia, odio vel timore subtraxerint, censura <pb/>simili appellacione cessante compellas veritati testimonium<handShift/>perhibere.</section>
-                <section type="formularz"> Datum <placeName ref="va-Q31">Rome apud Sanctum Petrum</placeName>, <date when="1382-02-19">XI kal. marcii, pontificatus nostri anno quarto</date>.</section>
+                    <persName ref="va-Q32"><persName ref="gnd-139890289">Urbanus</persName> episcopus, servus servorum Dei</persName> , dilecto filio . . <affiliation ref="va-Q45">officiali Wratislauiensi</affiliation> salutem et apostolicam benedictionem . Dilectorum filiorum . . <orgName ref="va-Q41">
+                        <affiliation ref="va-Q43">magistri</affiliation> et fratrum hospitalis pauperum Sancti Spiritus Kaliciensis, Gneznensis diocesis</orgName>, precibus inclinati, presentium tibi auctoritate mandamus, quatinus ea, que de bonis <orgName ref="va-Q41">ipsius hospitalis</orgName> alienata inveneris illicite vel distracta, ad ius et proprietatem <orgName ref="va-Q41">eiusdem hospitalis</orgName> legitime revocare procures, contradictores per censuram ecclesiasticam appellacione postposita compescendo. Testes autem, qui fuerint nominati, si se gracia, odio vel timore subtraxerint, censura <pb/>simili appellacione cessante compellas veritati testimonium<handShift/>perhibere.</section><section type="formularz"> Datum <placeName ref="va-Q31">Rome apud Sanctum Petrum</placeName>, <date when="1382-02-19">XI kal. marcii, pontificatus nostri anno quarto</date>.</section>
          </div>
       </body>
    </text>

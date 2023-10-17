@@ -1,0 +1,111 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Ekspektatywa na kanonię większą w kapitule miśnieńskiej dla Mikołaja
+               Kalow</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Bulla Bonifacego IX z dnia 13 listopada 1389</p>
+            <p>transza1</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>ASV, Reg. Lat., vol. 6, f. 258v-259v (or. f. CCLVIII-CCLVIIII)</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <abstract>
+            <p> Papież Bonifacy IX poleca oficjałowi naumburskiemu, by mocą władzy apostolskiej
+               udzielił Mikołajowi Kalow, mistrzowi sztuk i bakałarzowi medycyny, ekspektatywy na
+               kanonię większą w kapitule miśnieńskiej, pomimo że Mikołaj posiada już kanonię
+               lubuską oraz kanonię w kolegiacie NMP w Wurzen. </p>
+         </abstract>
+         <textClass ana="bulla"/>
+         <creation>
+            <date when="1389-11-13">13 novembris 1389</date>
+            <placeName ana="Rzym">Roma</placeName>
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>
+                <note place="left_margin">C(ancellaria)</note> <persName type="issuer issuer" ref="va-Q10">Bonifacius</persName> etc., dilecto filio <affiliation type="recipient executor" ref="va-Q432">officiali Nuemburgensi</affiliation>
+            Dignum arbitramur etc. Volentes igitur dilectum filium <persName ref="va-Q423" type="">Nicolaum Kalow, <affiliation ref="va-Q429">canonicum
+            Lubucensem</affiliation>, qui, ut asserit, <education type="education" ref="va-Q426">magister in artibus</education> et <education ref="va-Q424">bacallarius in medicina</education> existit</persName> apud nos de litterarum sciencia, vite ac morum honestate aliisque probitatis et virtutum
+            meritis multipliciter comendatum, horum intuitu favore prosequi gracioso, discrecioni
+            tue per apostolica scripta mandamus, quatenus, si post diligentem examinacionem dictum
+<persName ref="va-Q423">            Nicolaum</persName> ad hoc ydoneum esse reppereris, super quo tuam conscienciam oneramus, eidem
+            <persName ref="va-Q423">Nicolao</persName> de <affiliation ref="va-Q430">canonicatu ecclesie Misnensis</affiliation>, in <orgName ref="va-Q428">qua</orgName> maiores et minores prebende fore
+            noscuntur, cum plenitudine iuris canonici auctoritate nostra provideas, faciens ipsum
+<persName ref="va-Q423">            Nicolaum</persName> vel procuratorem suum eius nomine in <orgName ref="va-Q428">eadem ecclesia </orgName>in <affiliation ref="va-Q430">canonicum</affiliation> recipi et in
+            fratrem, stallo sibi in choro et loco in capitulo <placeName ref="va-Q467">ipsius ecclesie</placeName> cum dicti iuris
+            plenitudine assignatis ac unam de huiusmodi maioribus prebendis, si qua in dicta
+            ecclesia vacat ad presens vel cum vacaverit, quam dictus <persName ref="va-Q423">Nicolaus</persName> per se vel
+            procuratorem suum ad hoc legitime constitutum infra unius mensis spacium, postquam sibi
+            vel eidem procuratori vacacio illius innotuerit, duxerit acceptandam, conferendam eidem
+            <persName ref="va-Q423">Nicolao</persName>, post acceptacionem huiusmodi cum omnibus iuribus et pertinenciis suis donacioni
+            tue auctoritate nostra reserves, districtius inhibendo venerabili fratri nostro . .
+<affiliation ref="va-Q469">            episcopo</affiliation> et dilectis filiis <orgName ref="va-Q428">capitulo Misnen(sibus)</orgName> ac illi vel illis, ad quem vel ad
+            quos in <orgName ref="va-Q428">eadem ecclesia</orgName> huiusmodi maiorum prebendarum collacio, provisio, presentacio seu
+            quevis alia disposicio communiter vel divisim pertinet, ne de huiusmodi maiori prebenda
+            interim, f. 259r<pb/>eciam ante acceptacionem eandem, nisi postquam eis constiterit, quod
+            <persName ref="va-Q423">Nicolaus</persName> vel procurator predicti illam noluerint acceptare, disponere quoquomodo
+            presumant ac nichilominus huiusmodi prebendam maiorem, quam reservabis, si, ut
+            premittitur, vacat vel cum vacaverit, eidem <persName ref="va-Q423">Nicolao</persName> post acceptacionem predictam cum
+            omnibus iuribus et pertinenciis supradictis eadem auctoritate conferas et assignes,
+            inducens per te vel alium seu alios eundem <persName ref="va-Q423">Nicolaum</persName> vel dictum procuratorem pro eo in
+            corporalem possessionem maioris prebende iuriumque et pertinenciarum predictorum eadem
+            auctoritate et defendens inductum sibique faciens de ipsorum <affiliation ref="va-Q430">canonicatus</affiliation> et maioris
+            prebende fructibus, redditibus, proventibus, iuribus et obvencionibus universis integre
+            responderi, contradictores auctoritate nostra etc., non obstantibus de certo canonicorum
+            numero et quibusvis aliis <orgName ref="va-Q428">ipsius ecclesie</orgName> statutis et consuetudinibus, illis presertim,
+            quibus caveri dicitur, quod nullus in <orgName ref="va-Q428">dicta ecclesia</orgName> maiorem prebendam assequi valeat,
+            nisi de minori ad maiorem prebendam gradatim et per opcionem ascendat, contrariis
+            iuramento, confirmacione apostolica vel quacumque firmitate alia roboratis; aut si
+            aliqui apostolica vel alia quavis auctoritate in <orgName ref="va-Q428">eadem ecclesia</orgName> in canonicos sint
+            recepti vel, ut recipiantur, insistant seu si super provisionibus sibi faciendis de
+            canonicatibus et maioribus prebendis in <orgName ref="va-Q428">dicta ecclesia</orgName> speciales vel aliis beneficiis
+            ecclesiasticis in illis partibus generales dicte Sedis vel legatorum eius litteras
+            impetrarint, eciam si per eas ad inhibicionem, reservacionem et decretum vel alias
+            quomodolibet sit processum, quibus omnibus, preterquam <choice>
+                    <sic>auctoritate</sic>
+                    <corr>auctoritate nostra</corr>
+                </choice>  in <orgName ref="va-Q428">ecclesia
+            ipsa</orgName> receptis vel maiores prebendas expectantibus in eadem, dictum <persName ref="va-Q423">Nicolaum</persName> in
+            assecucione ipsius maioris prebende volumus anteferri, sed nullum per hoc eis quo ad
+            assecucionem maiorum prebendarum aut beneficiorum aliorum preiudicium generari; aut si
+            eisdem . . <affiliation ref="va-Q469">episcopo</affiliation> et <orgName ref="va-Q428">capitulo</orgName> vel quibusvis aliis communiter vel divisim ab eadem sit
+            Sede indultum, quod ad recepcionem vel provisionem alicuius minime teneantur et ad id
+            compelli aut quod interdici, suspendi vel excommunicari non possint quodque de
+            canonicatibus et maioribus prebendis <orgName ref="va-Q428">ipsius f. 259v<pb/>ecclesie</orgName> aut aliis beneficiis
+            ecclesiasticis ad eorum collacionem, provisionem, presentacionem seu quamvis aliam
+            disposicionem coniunctim vel separatim spectantibus nulli valeat provideri per litteras
+            apostolicas non facientes plenam et expressam ac de verbo ad verbum de indulto huiusmodi
+            mencionem et qualibet alia dicte Sedis indulgencia generali vel speciali, cuiuscumque
+            tenoris existat, per quam presentibus non expressam vel totaliter non insertam effectus
+            earum impediri valeat quomodolibet vel differri et de qua cuiusque toto tenore habenda
+            sit in nostris litteris mencio specialis; seu si dictus <persName ref="va-Q423">Nicolaus</persName> presens non fuerit ad
+            prestandum de observandis statutis et consuetudinibus ipsius ecclesie solitum
+            iuramentum, dummodo in absencia sua per procuratorem ydoneum, et cum ad <placeName ref="va-Q467">ecclesiam ipsam</placeName>
+            accesserit, corporaliter illud prestet aut si hodie alii vel aliis super equali vel
+            equalibus gracia seu graciis in <orgName ref="va-Q428">eadem ecclesia</orgName> litteras nostras duxerimus concedendas;
+            nos enim tam illas, quam presentes effectum sortiri volumus quacumque constitutione
+            apostolica contraria non obstante; seu quod dictus <persName ref="va-Q423">Nicolaus</persName> in <affiliation ref="va-Q429" type="">Lubucensi</affiliation> ac in <affiliation ref="va-Q427">Beate
+            Marie Virginis in Wurczin, Misnensis diocesis</affiliation>, ecclesiis canonicatus et prebendas
+            noscitur obtinere. Nos insuper, si dictus <persName ref="va-Q423">Nicolaus</persName> ad hoc repertus fuerit ydoneus, ut
+            prefertur, ex nunc perinde irritum decernimus et inane, si secus super hiis a quoquam
+            quavis auctoritate scienter vel ignoranter contigerit attemptari ac si die date
+            presencium eidem <persName ref="va-Q423">Nicolao</persName> <affiliation ref="va-Q430">canonicatum dicte ecclesie Misnensis</affiliation> contulissemus et maiorem
+            prebendam huiusmodi, si qua in <orgName ref="va-Q428">dicta ecclesia</orgName> tunc vacabat vel cum vacaret, quam dictus
+            <persName ref="va-Q423">Nicolaus</persName> duceret acceptandam, ut prefertur, conferendam eidem <persName ref="va-Q423">Nicolao</persName> post acceptacionem
+            huiusmodi donacioni apostolice cum interposicione decreti duxissemus specialiter
+            reservandam. Datum <placeName ref="va-Q31">Rome apud Sanctum Petrum</placeName>, <date when="1389-11-13">idus novembris, anno primo</date>. 
+            <handShift/>
+                <note place="in_line">N(icolaus). XXI. de Ben(even)to.</note>
+                <persName ref="va-Q30"> </persName>
+            </p>
+      </body>
+   </text>
+</TEI>

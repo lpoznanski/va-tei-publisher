@@ -4,7 +4,8 @@
                 <publisher>eXistSolutions GmbH</publisher>
                 <availability>
                     <licence target="https://www.gnu.org/licenses/gpl-3.0.en.html">Distributed under GNU General Public License</licence>
-                    <p>Copyright 2017 <ref target="http://existsolutions.com">eXistSolutions GmbH</ref></p>
+                    <p>Copyright 2017 <ref target="http://existsolutions.com">eXistSolutions GmbH</ref>
+                    </p>
                     <p>This program is free software: you can redistribute it and/or modify
                         it under the terms of the GNU General Public License as published by
                         the Free Software Foundation, either version 3 of the License, or
@@ -24,48 +25,72 @@
             <change when="2023-06-22+02:00">Initial version</change>
         </revisionDesc></teiHeader><text>
         <body>
-            <schemaSpec start="TEI teiCorpus" ident="vaticana"> <elementSpec ident="persName" mode="add"><model behaviour="alternate">
-            <param name="default" value="."/>
-            <param name="alternate" value="."/>
+            <schemaSpec start="TEI teiCorpus" ident="vaticana" source="teipublisher.odd"> <elementSpec ident="persName" mode="add"><model behaviour="inline" cssClass="annotation annotation-role authority">
             <outputRendition xml:space="preserve">
-            color: #50C878;
+            color: #2AAA8A;
             </outputRendition>
-        </model></elementSpec><elementSpec ident="settlement" mode="add"><model behaviour="alternate">
+        </model></elementSpec>
+                <elementSpec ident="settlement" mode="add"><model behaviour="alternate">
             <param name="default" value="."/>
             <param name="alternate" value="."/>
             <outputRendition xml:space="preserve">
             color: #00A36C;
             </outputRendition>
-        </model></elementSpec><elementSpec ident="affiliation" mode="add"><model behaviour="link">
+        </model></elementSpec>
+                <elementSpec ident="affiliation" mode="add"><model behaviour="link">
             <param name="uri" value="concat('https://va.wiki.kul.pl/wiki/Item:', substring-after(@ref, '-'))"/>
             <outputRendition xml:space="preserve">
             color: #5F8575;
             </outputRendition>
-        </model></elementSpec><elementSpec ident="date" mode="add"><model predicate="@when" behaviour="alternate">
+        </model></elementSpec>
+                <elementSpec ident="date" mode="add"><model predicate="@when" behaviour="alternate">
             <param name="default" value="."/>
             <param name="alternate" value="@when"/>
             <outputRendition xml:space="preserve">
             color: #097969;
             </outputRendition>
-        </model></elementSpec><elementSpec ident="measure" mode="add"><model behaviour="alternate">
+        </model></elementSpec>
+                <elementSpec ident="measure" mode="add"><model behaviour="alternate">
             <param name="default" value="."/>
             <param name="alternate" value="concat('Jednostka: ', @unit, ', Ilość: ', @quantity, ', Szczegóły: ', @commodity)"/>
             <outputRendition xml:space="preserve">
             color: #008080;
             </outputRendition>
-        </model></elementSpec><elementSpec ident="orgName" mode="add"><model behaviour="alternate">
+        </model></elementSpec>
+                <elementSpec ident="orgName" mode="add"><model behaviour="alternate">
             <param name="default" value="."/>
             <param name="alternate" value="."/>
             <outputRendition xml:space="preserve">
             color: #228B22;
             </outputRendition>
-        </model></elementSpec><elementSpec ident="placeName" mode="add"><model behaviour="alternate">
+        </model></elementSpec>
+                <elementSpec ident="placeName" mode="add"><model behaviour="alternate">
             <param name="default" value="."/>
             <param name="alternate" value="."/>
             <outputRendition xml:space="preserve">
             color: #2AAA8A;
             </outputRendition>
-        </model></elementSpec><elementSpec ident="roleName" mode="add"/><elementSpec ident="abstract" mode="add"><model behaviour="section"/></elementSpec><elementSpec ident="teiHeader" mode="add"><modelSequence>
+        </model></elementSpec>
+                <elementSpec ident="titleStmt" mode="add"><model output="latex" behaviour="meta">
+            <param name="content" value="."/>
+        </model><model output="fo" behaviour="heading"/><model predicate="$parameters?mode='title'" behaviour="heading">
+            <param name="content" value="title[not(@type)]"/>
+            <param name="level" value="5"/>
+        </model><modelSequence output="web" predicate="$parameters?header='short'">
+            <model behaviour="link">
+                <param name="content" value="title[1]"/>
+                <param name="uri" value="$parameters?doc"/>
+            </model>
+            <model behaviour="block">
+                <param name="content" value="subsequence(title, 2)"/>
+            </model>
+            <model behaviour="block">
+                <param name="content" value="author"/>
+            </model>
+        </modelSequence><model output="web" behaviour="block"/></elementSpec>
+                <elementSpec ident="roleName" mode="add"><model behaviour="inline" cssClass="annotation annotation-role authority"/></elementSpec>
+                <elementSpec ident="abstract" mode="add"/>
+                <elementSpec ident="teiHeader" mode="add"><modelSequence>
             <model behaviour="block">
                 <param name="content" value="//titleStmt/title"/>
             </model>
@@ -88,45 +113,109 @@ border: 3px solid;
                 </outputRendition>
             </model>
             <model behaviour="block">
-                <param name="content"/>
+                <param name="content" value="null"/>
                 <outputRendition xml:space="preserve">
                 font-size: 0.5em;
                 </outputRendition>
             </model>
-        </modelSequence></elementSpec><elementSpec ident="div" mode="add"><modelSequence predicate="@type='doc'">
+        </modelSequence></elementSpec>
+                <elementSpec ident="div" mode="add"><modelSequence predicate="@type='doc'">
             <model behaviour="block">
                 <param name="content" value="root(.)//profileDesc/abstract"/>
                 <outputRendition xml:space="preserve">
+                
+                
+                
                 padding: 20px;
 margin-top: 20px;
 margin-bottom: 20px;
 margin-right: 60px;
 border: 5px solid;
 text-align: justify;
+                
+                
+                
                 </outputRendition>
             </model>
             <model behaviour="section">
                 <outputRendition xml:space="preserve">
+                
+                
+                
                 margin-right: 60px;
 text-align: justify;
 first-letter: 3;
+                
+                
+                
                 </outputRendition>
             </model>
-        </modelSequence></elementSpec><elementSpec ident="title" mode="add"/><elementSpec ident="section" mode="add"><model predicate="@type='text'" behaviour="inline">
+        </modelSequence></elementSpec>
+                <elementSpec ident="title" mode="add"><model behaviour="heading">
+            <param name="level" value="2"/>
+            <pb:template xmlns="" xml:space="preserve">[[]]</pb:template>
+        </model><model predicate="$parameters?header='short'" behaviour="heading">
+            <param name="level" value="5"/>
+        </model><modelSequence predicate="parent::titleStmt/parent::fileDesc">
+            <model predicate="preceding-sibling::title" behaviour="text">
+                <param name="content" value="' — '"/>
+            </model>
+            <model behaviour="inline"/>
+        </modelSequence><model predicate="not(@level) and parent::bibl" behaviour="inline"/><modelSequence predicate="@level='m' or not(@level)">
+            <model behaviour="inline">
+                <outputRendition xml:space="preserve">
+                font-style: italic;
+                </outputRendition>
+            </model>
+            <model predicate="ancestor::biblFull" behaviour="text">
+                <param name="content" value="', '"/>
+            </model>
+        </modelSequence><modelSequence predicate="@level='s' or @level='j'">
+            <model behaviour="inline">
+                <outputRendition xml:space="preserve">
+                font-style: italic;
+                </outputRendition>
+            </model>
+            <model predicate="following-sibling::* and     (  ancestor::biblFull)" behaviour="text">
+                <param name="content" value="', '"/>
+            </model>
+        </modelSequence><modelSequence predicate="@level='u' or @level='a'">
+            <model behaviour="inline">
+                <outputRendition xml:space="preserve">
+                font-style: italic;
+                </outputRendition>
+            </model>
+            <model predicate="following-sibling::* and     (    ancestor::biblFull)" behaviour="text">
+                <param name="content" value="'. '"/>
+            </model>
+        </modelSequence><model behaviour="inline">
+            <outputRendition xml:space="preserve">
+            font-style: italic;
+            </outputRendition>
+        </model></elementSpec>
+                <elementSpec ident="section" mode="add"><model predicate="@type='text'" behaviour="inline">
             <outputRendition xml:space="preserve">
             font-size: 1.15em;
             </outputRendition>
         </model><model predicate="@type='formularz'" behaviour="inline">
             <outputRendition xml:space="preserve">
+            
+            
+            
             color: #676767;
 background: #ececec;
+            
+            
+            
             </outputRendition>
-        </model></elementSpec><elementSpec ident="education" mode="add"><model behaviour="alternate">
+        </model></elementSpec>
+                <elementSpec ident="education" mode="add"><model behaviour="alternate">
             <param name="default" value="."/>
             <param name="alternate" value="@subtype"/>
             <outputRendition xml:space="preserve">
             color: #50C878;
             </outputRendition>
-        </model></elementSpec></schemaSpec>
+        </model></elementSpec>
+            </schemaSpec>
         </body>
     </text></TEI>

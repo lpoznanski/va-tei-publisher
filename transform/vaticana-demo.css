@@ -53,7 +53,8 @@
 .tei-l { margin-left: 1em; }
 .tei-signed1 { text-align: right; }
 .tei-signed2 { font-style: italic; }
-.tei-p2 { text-align: justify; }
+.tei-p1 { text-align: justify; margin-right: 20px; margin-left: 20px; font-size: 1.1em; }
+.tei-p3 { text-align: justify; }
 .tei-q1 { margin-left: 10px; margin-right: 10px; }
 .tei-q2:before { content: '‘'; }
 .tei-q2:after { content: '’'; }
@@ -86,6 +87,9 @@
 .tei-foreign { font-style:italic; }
 .tei-sic2:before { content: '{'; }
 .tei-sic2:after { content: '}'; }
+.tei-body1 { font: bold 25px 'Arial Narrow', Arial, sans-serif; font-stretch: condensed; margin-top: 30px; margin-bottom: 10px; }
+.tei-body2 { color: inherit; }
+.tei-body3 { font-style: italic; background-image: url("resources/images/OLD_PAPER_TEXTURE.jpg"); margin-top: 20px; padding: 20px; }
 .tei-quote1:before { content: '‘'; }
 .tei-quote1:after { content: '’'; }
 .tei-quote2 { margin-left: 10px; margin-right: 10px; }
@@ -97,12 +101,6 @@
 .tei-row1 { font-weight: bold; }
 .tei-floatingText { margin: 6pt; border: solid black 1pt; }
 .tei-table { font-size: smaller; background-color: #F0F0F0; }
-.tei-persName { color: #2AAA8A; }
-.tei-settlement { color: #00A36C; }
-.tei-affiliation { color: #5F8575; }
-.tei-measure { color: #008080; }
-.tei-orgName { color: #228B22; }
-.tei-placeName { color: #2AAA8A; }
-.tei-section1 { font-size: 1.15em; }
-.tei-section2 { color: #676767; background: #ececec; }
-.tei-education { color: #50C878; }
+.tei-persName { color: blue; }
+.tei-affiliation { color: orange; }
+.tei-placeName { color: green; }

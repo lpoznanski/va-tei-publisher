@@ -1,7 +1,7 @@
 /*
  * This file contains the javascript code, which connects the various elements of the
  * user interface for the annotation editor.
- *
+ * 
  * You should not need to change this unless you want to add new features.
  */
 
@@ -151,11 +151,11 @@ window.addEventListener("WebComponentsReady", () => {
 
 	/**
 	 * Called if user selects or deselects an occurrence
-	 *
+	 * 
 	 * @param {any} data form data
 	 * @param {any} o range data associated with the selected occurrence
 	 * @param {boolean} inBatch true if this is a batch operation
-	 * @returns
+	 * @returns 
 	 */
 	function selectOccurrence(data, o, inBatch) {
 		try {
@@ -336,9 +336,9 @@ window.addEventListener("WebComponentsReady", () => {
 
 	/**
 	 * Handler called if user clicks on an annotation action.
-	 *
+	 * 
 	 * @param {HTMLButton} button the button
-	 * @returns
+	 * @returns 
 	 */
 	function actionHandler(button) {
 		if (selection) {
@@ -365,7 +365,7 @@ window.addEventListener("WebComponentsReady", () => {
 
 	/**
 	 * Handler called if user clicks the mark-all occurrences button.
-	 *
+	 * 
 	 * @param {Event} ev event
 	 */
 	function markAll(ev) {
@@ -553,7 +553,7 @@ window.addEventListener("WebComponentsReady", () => {
 			authorityDialog.open();
 		});
 	});
-
+	
 	document.querySelectorAll('.form-ref2 [slot="prefix"]').forEach(elem => {
 		elem.addEventListener("click", () => {
 			window.pbEvents.emit("pb-authority-lookup", "transcription", {
@@ -650,7 +650,7 @@ window.addEventListener("WebComponentsReady", () => {
 			window.localStorage.setItem(`tei-publisher.annotations.${doc.path}.history`, JSON.stringify(view.getHistory()));
 		}
 	});
-
+	
 	window.pbEvents.subscribe("pb-annotation-edit", "transcription", (ev) => {
 		activeSpan = ev.detail.target;
 		text = activeSpan.textContent.replace(/\s+/g, " ");

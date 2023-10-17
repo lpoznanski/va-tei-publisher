@@ -1,11 +1,11 @@
 (:~
 
     Transformation module generated from TEI ODD extensions for processing models.
-    ODD: /db/apps/tei-publisher/odd/vaticana.odd
+    ODD: /db/apps/tei-publisher/odd/vaticana-demo.odd
  :)
 xquery version "3.1";
 
-module namespace model="http://www.tei-c.org/pm/models/vaticana/fo";
+module namespace model="http://www.tei-c.org/pm/models/vaticana-demo/fo";
 
 declare default element namespace "http://www.tei-c.org/ns/1.0";
 
@@ -34,7 +34,7 @@ declare function model:transform($options as map(*), $input as node()*) {
         map:merge(($options,
             map {
                 "output": ["fo"],
-                "odd": "/db/apps/tei-publisher/odd/vaticana.odd",
+                "odd": "/db/apps/tei-publisher/odd/vaticana-demo.odd",
                 "apply": model:apply#2,
                 "apply-children": model:apply-children#3
             }
@@ -136,7 +136,10 @@ declare function model:apply($config as map(*), $input as node()*) {
                         else
                             fo:inline($config, ., ("tei-signed2", css:map-rend-to-class(.)), .)
                     case element(p) return
-                        fo:paragraph($config, ., css:get-rendition(., ("tei-p2", css:map-rend-to-class(.))), .)
+                        if (parent::abstract) then
+                            fo:paragraph($config, ., ("tei-p1", css:map-rend-to-class(.)), .)
+                        else
+                            fo:paragraph($config, ., css:get-rendition(., ("tei-p3", css:map-rend-to-class(.))), .)
                     case element(list) return
                         fo:list($config, ., css:get-rendition(., ("tei-list", css:map-rend-to-class(.))), item, ())
                     case element(q) return
@@ -379,8 +382,10 @@ declare function model:apply($config as map(*), $input as node()*) {
                         fo:block($config, ., ("tei-spGrp", css:map-rend-to-class(.)), .)
                     case element(body) return
                         (
-                            fo:index($config, ., ("tei-body1", css:map-rend-to-class(.)), ., 'toc'),
-                            fo:block($config, ., ("tei-body2", css:map-rend-to-class(.)), .)
+                            fo:block($config, ., ("tei-body1", css:map-rend-to-class(.)), root(.)//fileDesc/titleStmt/substring-before(title, '-')),
+                            fo:link($config, ., ("tei-body2", css:map-rend-to-class(.)), root(.)//fileDesc/titleStmt/substring-after(title, '- '), concat('https://va.wiki.kul.pl/wiki/Item:', root(.)//fileDesc/titleStmt/substring-after(title, '- ')), map {}),
+                            fo:block($config, ., ("tei-body3", css:map-rend-to-class(.)), root(.)//profileDesc/abstract),
+                            fo:section($config, ., ("tei-body4", css:map-rend-to-class(.)), .)
                         )
 
                     case element(fw) return
@@ -432,29 +437,14 @@ declare function model:apply($config as map(*), $input as node()*) {
                     case element(cb) return
                         fo:break($config, ., ("tei-cb", css:map-rend-to-class(.)), ., 'column', @n)
                     case element(persName) return
-                        fo:inline($config, ., ("tei-persName", "annotation", "annotation-role", "authority", css:map-rend-to-class(.)), .)
-                    case element(settlement) return
-                        fo:alternate($config, ., ("tei-settlement", css:map-rend-to-class(.)), ., ., .)
+                        fo:alternate($config, ., ("tei-persName", css:map-rend-to-class(.)), ., ., .)
                     case element(affiliation) return
-                        fo:link($config, ., ("tei-affiliation", css:map-rend-to-class(.)), ., concat('https://va.wiki.kul.pl/wiki/Item:', substring-after(@ref, '-')), map {})
-                    case element(measure) return
-                        fo:alternate($config, ., ("tei-measure", css:map-rend-to-class(.)), ., ., concat('Jednostka: ', @unit, ', Ilość: ', @quantity, ', Szczegóły: ', @commodity))
-                    case element(orgName) return
-                        fo:alternate($config, ., ("tei-orgName", css:map-rend-to-class(.)), ., ., .)
+                        fo:alternate($config, ., ("tei-affiliation", css:map-rend-to-class(.)), ., ., .)
                     case element(placeName) return
-                        fo:alternate($config, ., ("tei-placeName", css:map-rend-to-class(.)), ., ., .)
-                    case element(roleName) return
-                        fo:inline($config, ., ("tei-roleName", "annotation", "annotation-role", "authority", css:map-rend-to-class(.)), .)
-                    case element(section) return
-                        if (@type='text') then
-                            fo:inline($config, ., ("tei-section1", css:map-rend-to-class(.)), .)
+                        if (parent::p) then
+                            fo:alternate($config, ., ("tei-placeName", css:map-rend-to-class(.)), ., ., .)
                         else
-                            if (@type='formularz') then
-                                fo:inline($config, ., ("tei-section2", css:map-rend-to-class(.)), .)
-                            else
-                                $config?apply($config, ./node())
-                    case element(education) return
-                        fo:alternate($config, ., ("tei-education", css:map-rend-to-class(.)), ., ., @subtype)
+                            $config?apply($config, ./node())
                     case element() return
                         if (namespace-uri(.) = 'http://www.tei-c.org/ns/1.0') then
                             $config?apply($config, ./node())

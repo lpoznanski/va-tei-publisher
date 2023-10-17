@@ -71,7 +71,7 @@ declare function anno:annotations($type as xs:string, $properties as map(*)?, $c
                 if ($properties?quantity) then attribute quantity { $properties?quantity } else (),
                 if ($properties?unit) then attribute commodity { $properties?commodity } else (),
                 $content()
-            }
+            }   
             </measure>
 (:        case "currency" return:)
 (:            <currency xmlns="http://www.tei-c.org/ns/1.0">{$content()}</currency>:)
@@ -85,7 +85,7 @@ declare function anno:annotations($type as xs:string, $properties as map(*)?, $c
             <orgName xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}">{$content()}</orgName>
         case "hi" return
             <hi xmlns="http://www.tei-c.org/ns/1.0">
-            {
+            { 
                 if ($properties?rend) then attribute rend { $properties?rend } else (),
                 if ($properties?rendition) then attribute rendition { $properties?rendition } else (),
                 $content()
@@ -124,7 +124,7 @@ declare function anno:annotations($type as xs:string, $properties as map(*)?, $c
                     order by number($n)
                     return
                         <rdg wit="{$properties('wit[' || $n || ']')}">{$properties($prop)}</rdg>
-
+                        
                 }
                 {
                     for $prop in map:keys($properties)[starts-with(., 'detail')]
@@ -154,7 +154,7 @@ declare function anno:annotations($type as xs:string, $properties as map(*)?, $c
         case "link" return
             <ref xmlns="http://www.tei-c.org/ns/1.0" target="{$properties?target}">{$content()}</ref>
         case "state" return
-            <state xmlns="http://www.tei-c.org/ns/1.0">{$content()}</state>
+            <state xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}">{$content()}</state>
         case "ref" return
             ($content(), <ref xmlns="http://www.tei-c.org/ns/1.0" ref="{$properties?ref}" type="{$properties?type}"/>)
         case "edit" return
@@ -189,6 +189,8 @@ declare function anno:occurrences($type as xs:string, $key as xs:string) {
             collection($config:data-default)//tei:roleName[@ref = $key]
         case "education" return
             collection($config:data-default)//tei:education[@ref = $key]
+        case "state" return
+            collection($config:data-default)//tei:state[@ref = $key]
         case "ref" return
             collection($config:data-default)//tei:ref[@ref = $key]
         default return ()
