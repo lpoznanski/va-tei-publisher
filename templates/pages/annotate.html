@@ -32,41 +32,55 @@
                     <main>
                         <aside class="annotation-editor">
                             <div class="toolbar">
-                                <!--paper-icon-button id="clear-all" icon="icons:refresh"></paper-icon-button-->
+                                <div>
                                 <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.person" title="Person" data-type="person" data-shortcut="⌘+⇧+p,ctrl+⇧+p" icon="social:person" disabled="disabled"/>
-                                <!--testowy guzik-->
                                 <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.roleName" title="Rolename" data-type="rolename" data-shortcut="" icon="social:person-outline" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.education" title="Education" data-type="education" data-shortcut="" icon="social:school" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.state" title="State" data-type="state" icon="icons:cloud" data-shortcut="" disabled="disabled"/>
+                                </div>
+                                <div>
+                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.organisation" title="organization" data-type="organization" data-shortcut="⌘+⇧+o,ctrl+⇧+o" icon="social:people" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.affiliation" title="Affiliation" data-type="affiliation" data-shortcut="" icon="icons:donut-large" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.event" title="Event" data-type="event" data-shortcut="" icon="maps:local-activity" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.measure" title="Measure" data-type="measure" data-shortcut="" icon="social:cake" disabled="disabled"/>
+                                </div>
+                                <div>
+                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.place" title="Place" data-type="place" icon="maps:place" data-shortcut="⌘+⇧+q,ctrl+⇧+q" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.settlement" title="Settlement" data-type="settlement" data-shortcut="" icon="social:location-city" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.district" title="District" data-type="district" data-shortcut="" icon="maps:my-location" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.region" title="Region" data-type="region" data-shortcut="" icon="maps:map" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.country" title="Country" data-type="country" data-shortcut="" icon="icons:flag" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.measure" title="Measure" data-type="measure" data-shortcut="" icon="social:cake" disabled="disabled"/>
-                                <!--paper-icon-button class="annotation-action" data-i18n="[title]annotations.currency" title="Currency" data-type="currency" data-shortcut="" icon="maps:local-atm" disabled="disabled"/-->
-                                <!--paper-icon-button class="annotation-action" data-i18n="[title]annotations.num" title="Num" data-type="num" data-shortcut="" icon="editor:attach-money" disabled="disabled"/-->
-                                <!--koniec testowego guzika-->
-                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.organisation" title="organization" data-type="organization" data-shortcut="⌘+⇧+o,ctrl+⇧+o" icon="social:people" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.place" title="Place" data-type="place" icon="maps:place" data-shortcut="⌘+⇧+q,ctrl+⇧+q" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.term" title="Term" data-type="term" icon="icons:bookmark" data-shortcut="⌘+⇧+t,ctrl+⇧+t" disabled="disabled"/>
+                                </div>
+                                <div>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.note" title="Note" data-type="note" icon="icons:note-add" data-shortcut="" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.date" title="Date" data-type="date" icon="icons:today" data-shortcut="⌘+⇧+d,ctrl+⇧+d" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.ref" title="Reference" data-type="link" icon="icons:link" data-shortcut="⌘+⇧+l,ctrl+⇧+l" disabled="disabled"/>
+                                </div>
+                                <div>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.abbreviation" title="Abbreviation" data-type="abbreviation" icon="icons:translate" data-shortcut="⌘+⇧+b,ctrl+⇧+b" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" title="Sic" data-type="sic" icon="editor:strikethrough-s" data-shortcut="⌘+⇧+e,ctrl+⇧+e" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.reg" title="Regularization" data-type="reg" icon="editor:wrap-text" data-shortcut="⌘+⇧+g,ctrl+⇧+g" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.app" title="Apparatus" data-type="app" icon="icons:visibility" data-shortcut="⌘+⇧+v,ctrl+⇧+v" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.hi" title="Highlight" data-type="hi" icon="editor:format-bold" data-shortcut="⌘+⇧+h,ctrl+⇧+h" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.pb" title="Pb" data-type="pb" icon="icons:last-page" data-shortcut="" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.handShift" title="HandShift" data-type="handShift" icon="icons:thumb-up" data-shortcut="" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.section" title="Section" data-type="section" icon="icons:date-range" data-shortcut="" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.note" title="Note" data-type="note" icon="icons:note-add" data-shortcut="" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.del" title="Del" data-type="del" icon="icons:close" data-shortcut="" disabled="disabled"/>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.add" title="Add" data-type="add" icon="icons:add" data-shortcut="" disabled="disabled"/>
-                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.state" title="State" data-type="state" icon="icons:cloud" data-shortcut="" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.section" title="Section" data-type="section" icon="icons:date-range" data-shortcut="" disabled="disabled"/>
+                                </div>
+                                <div>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.pb" title="Pb" data-type="pb" icon="icons:last-page" data-shortcut="" disabled="disabled"/>
+                                <paper-icon-button class="annotation-action" data-i18n="[title]annotations.handShift" title="HandShift" data-type="handShift" icon="icons:thumb-up" data-shortcut="" disabled="disabled"/>
+                                </div>
+                                <div>
                                 <paper-icon-button class="annotation-action" data-i18n="[title]annotations.modify" title="Edit" data-type="edit" icon="editor:mode-edit" data-shortcut="⌘+⇧+m,ctrl+⇧+m" disabled="disabled"/>
+                                </div>
+                                <!--paper-icon-button id="clear-all" icon="icons:refresh"></paper-icon-button-->
+                                <!--testowy guzik-->
+                                <!--<paper-icon-button class="annotation-action" data-i18n="[title]annotations.event" title="Event" data-type="event" data-shortcut="" icon="maps:local-activity" disabled="disabled"/>-->
+                                <!--paper-icon-button class="annotation-action" data-i18n="[title]annotations.currency" title="Currency" data-type="currency" data-shortcut="" icon="maps:local-atm" disabled="disabled"/-->
+                                <!--paper-icon-button class="annotation-action" data-i18n="[title]annotations.num" title="Num" data-type="num" data-shortcut="" icon="editor:attach-money" disabled="disabled"/-->
+                                <!--koniec testowego guzika-->
+                                <!--<paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.term" title="Term" data-type="term" icon="icons:bookmark" data-shortcut="⌘+⇧+t,ctrl+⇧+t" disabled="disabled"/>-->
+                                <!--<paper-icon-button class="annotation-action" data-i18n="[title]annotations.ref" title="Reference" data-type="link" icon="icons:link" data-shortcut="⌘+⇧+l,ctrl+⇧+l" disabled="disabled"/>-->
+                                <!--<paper-icon-button class="annotation-action" data-i18n="[title]annotations.hi" title="Highlight" data-type="hi" icon="editor:format-bold" data-shortcut="⌘+⇧+h,ctrl+⇧+h" disabled="disabled"/>-->
                                 <paper-icon-button id="ner-action" icon="social:group-add" data-i18n="[title]annotations.ner.title"/>
-                                <paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.ref" title="Ref" data-type="ref" icon="icons:add-alert" data-shortcut="⌘+⇧+t,ctrl+⇧+t" disabled="disabled"/>
+                                <!--<paper-icon-button class="annotation-action authority" data-i18n="[title]annotations.ref" title="Ref" data-type="ref" icon="icons:add-alert" data-shortcut="⌘+⇧+t,ctrl+⇧+t" disabled="disabled"/>-->
                             </div>
                             <iron-form id="edit-form">
                                 <form action="">
@@ -81,8 +95,9 @@
                                     <div class="annotation-form note">
                                         <paper-dropdown-menu name="type" label="type" type="note">
                                             <paper-listbox slot="dropdown-content" selected="1">
-                                                <paper-item>diocesis</paper-item>
+                                                <paper-item>marginal_note</paper-item>
                                                 <paper-item>document_fee</paper-item>
+                                                <paper-item>editorial</paper-item>
                                             </paper-listbox>
                                         </paper-dropdown-menu>
                                         <paper-dropdown-menu name="place" label="place" type="note">
@@ -96,33 +111,168 @@
                                             </paper-listbox>
                                         </paper-dropdown-menu>
                                     </div>
-                                    <div class="annotation-form person organization place term affiliation settlement region education rolename state ref">
-                                        <paper-dropdown-menu name="type" label="type">
-                                            <paper-listbox slot="dropdown-content" selected="1" name="type">
-                                                <paper-item name="type">wystawca</paper-item>
-                                                <paper-item name="type">odbiorca</paper-item>
-                                                <paper-item name="type">egzekutor</paper-item>
-                                                <paper-item name="type">taksa_dokumentu</paper-item>
-                                                <paper-item name="type">magister_registrów</paper-item>
-                                                <paper-item name="type">nota_marginalna</paper-item>
-                                                <paper-item name="type">miejsce_wystawienia_dokumentu</paper-item>
-                                                <paper-item name="type">data_dokumentu</paper-item>
-                                                <paper-item name="type">beneficjent_łaski</paper-item> 
-                                                <paper-item name="type">posiadane_beneficjum</paper-item>
-                                                <paper-item name="type">posiadana_ekspektatywa_na_beneficjum</paper-item>
-                                                <paper-item name="type">education</paper-item>
-                                                <paper-item name="type">przedmiot_nadania</paper-item>
-                                                <paper-item name="type">osoba_w_sporze</paper-item>
-                                                <paper-item name="type">zmarły_w_kurii</paper-item>
-                                                <paper-item name="type">rezygnacja_z_beneficjum</paper-item>
-                                                <paper-item name="type">mąż</paper-item>
-                                                <paper-item name="type">ojciec</paper-item>
-                                                <paper-item name="type">żona</paper-item>
-                                                <paper-item name="type">dziecko</paper-item>
-                                                <paper-item name="type">nepos</paper-item>
-                                                <paper-item name="type">familiaris</paper-item>
-                                                <paper-item name="type">tytulatura</paper-item>
-                                                <paper-item name="type">obiekt_występujący_w_dokumencie</paper-item>
+                                    <div class="annotation-form affiliation">
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>posiadane_beneficjum</paper-item>
+                                                <paper-item>posiadana_ekspektatywa_na_beneficjum</paper-item>
+                                                <paper-item>przedmiot_nadania</paper-item>
+                                                <paper-item>egzekutor</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>posiadane_beneficjum</paper-item>
+                                                <paper-item>posiadana_ekspektatywa_na_beneficjum</paper-item>
+                                                <paper-item>przedmiot_nadania</paper-item>
+                                                <paper-item>egzekutor</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                    <div class="annotation-form education">
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>education</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                    <div class="annotation-form organization">
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>beneficjent_laski</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                    <div class="annotation-form state">
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>pochodzenie_spoleczne</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                    <div class="annotation-form region">
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>diecezja</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                    <div class="annotation-form place">
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>miejsce_wystawienia_dokumentu</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                    <div class="annotation-form person">
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>wystawca</paper-item>
+                                                <paper-item>odbiorca</paper-item>
+                                                <paper-item>egzekutor</paper-item>
+                                                <paper-item>urzednik_kurialny</paper-item>
+                                                <paper-item>beneficjent_laski</paper-item>
+                                                <paper-item>osoba_w_sporze</paper-item>
+                                                <paper-item>zmarly_w_kurii</paper-item>
+                                                <paper-item>rezygnacja_z_beneficjum</paper-item>
+                                                <paper-item>maz</paper-item>
+                                                <paper-item>ojciec</paper-item>
+                                                <paper-item>zona</paper-item>
+                                                <paper-item>dziecko</paper-item>
+                                                <paper-item>nepos</paper-item>
+                                                <paper-item>familiaris</paper-item>
+                                                <paper-item>tytulatura</paper-item>
+                                                <paper-item>diecezja</paper-item>
+                                                <paper-item>stopien_swiecen</paper-item>
+                                                <paper-item>brat_siostra</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>wystawca</paper-item>
+                                                <paper-item>odbiorca</paper-item>
+                                                <paper-item>egzekutor</paper-item>
+                                                <paper-item>urzednik_kurialny</paper-item>
+                                                <paper-item>beneficjent_laski</paper-item>
+                                                <paper-item>osoba_w_sporze</paper-item>
+                                                <paper-item>zmarly_w_kurii</paper-item>
+                                                <paper-item>rezygnacja_z_beneficjum</paper-item>
+                                                <paper-item>maz</paper-item>
+                                                <paper-item>ojciec</paper-item>
+                                                <paper-item>zona</paper-item>
+                                                <paper-item>dziecko</paper-item>
+                                                <paper-item>nepos</paper-item>
+                                                <paper-item>familiaris</paper-item>
+                                                <paper-item>tytulatura</paper-item>
+                                                <paper-item>diecezja</paper-item>
+                                                <paper-item>stopien_swiecen</paper-item>
+                                                <paper-item>brat_siostra</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>wystawca</paper-item>
+                                                <paper-item>odbiorca</paper-item>
+                                                <paper-item>egzekutor</paper-item>
+                                                <paper-item>urzednik_kurialny</paper-item>
+                                                <paper-item>beneficjent_laski</paper-item>
+                                                <paper-item>osoba_w_sporze</paper-item>
+                                                <paper-item>zmarly_w_kurii</paper-item>
+                                                <paper-item>rezygnacja_z_beneficjum</paper-item>
+                                                <paper-item>maz</paper-item>
+                                                <paper-item>ojciec</paper-item>
+                                                <paper-item>zona</paper-item>
+                                                <paper-item>dziecko</paper-item>
+                                                <paper-item>nepos</paper-item>
+                                                <paper-item>familiaris</paper-item>
+                                                <paper-item>tytulatura</paper-item>
+                                                <paper-item>diecezja</paper-item>
+                                                <paper-item>stopien_swiecen</paper-item>
+                                                <paper-item>brat_siostra</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>wystawca</paper-item>
+                                                <paper-item>odbiorca</paper-item>
+                                                <paper-item>egzekutor</paper-item>
+                                                <paper-item>urzednik_kurialny</paper-item>
+                                                <paper-item>beneficjent_laski</paper-item>
+                                                <paper-item>osoba_w_sporze</paper-item>
+                                                <paper-item>zmarly_w_kurii</paper-item>
+                                                <paper-item>rezygnacja_z_beneficjum</paper-item>
+                                                <paper-item>maz</paper-item>
+                                                <paper-item>ojciec</paper-item>
+                                                <paper-item>zona</paper-item>
+                                                <paper-item>dziecko</paper-item>
+                                                <paper-item>nepos</paper-item>
+                                                <paper-item>familiaris</paper-item>
+                                                <paper-item>tytulatura</paper-item>
+                                                <paper-item>diecezja</paper-item>
+                                                <paper-item>stopien_swiecen</paper-item>
+                                                <paper-item>brat_siostra</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content">
+                                                <paper-item>wystawca</paper-item>
+                                                <paper-item>odbiorca</paper-item>
+                                                <paper-item>egzekutor</paper-item>
+                                                <paper-item>urzednik_kurialny</paper-item>
+                                                <paper-item>beneficjent_laski</paper-item>
+                                                <paper-item>osoba_w_sporze</paper-item>
+                                                <paper-item>zmarly_w_kurii</paper-item>
+                                                <paper-item>rezygnacja_z_beneficjum</paper-item>
+                                                <paper-item>maz</paper-item>
+                                                <paper-item>ojciec</paper-item>
+                                                <paper-item>zona</paper-item>
+                                                <paper-item>dziecko</paper-item>
+                                                <paper-item>nepos</paper-item>
+                                                <paper-item>familiaris</paper-item>
+                                                <paper-item>tytulatura</paper-item>
+                                                <paper-item>diecezja</paper-item>
+                                                <paper-item>stopien_swiecen</paper-item>
+                                                <paper-item>brat_siostra</paper-item>
                                             </paper-listbox>
                                         </paper-dropdown-menu>
                                     </div>
@@ -132,7 +282,7 @@
                                         <paper-input name="to" label="to" type="date"/>
                                          <paper-dropdown-menu name="type" label="type" type="date">
                                             <paper-listbox slot="dropdown-content" selected="1">
-                                                <paper-item>document_issued</paper-item>
+                                                <paper-item>data_</paper-item>
                                             </paper-listbox>
                                         </paper-dropdown-menu>
                                     </div>
@@ -143,10 +293,18 @@
                                         <paper-input name="unit" label="unit"/>
                                         <paper-input name="quantity" label="quantity"/>
                                         <paper-input name="commodity" label="commodity"/>
+                                        <paper-dropdown-menu name="ana" label="ana">
+                                            <paper-listbox slot="dropdown-content" selected="1" name="type">
+                                                <paper-item name="ana">wartosc_beneficjum</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
                                     </div>
                                     <div class="annotation-form hi">
                                         <paper-input name="rend" label="rend"/>
                                         <paper-input name="rendition" label="rendition"/>
+                                    </div>
+                                    <div class="annotation-form pb">
+                                        <paper-input name="n" label="n"/>
                                     </div>
                                     <div class="annotation-form link">
                                         <paper-input name="target" label="target"/>
@@ -158,7 +316,14 @@
                                             <paper-input name="detail" label="witDetail"/>
                                         </template>
                                     </pb-repeat>
-                                    <paper-input class="annotation-form sic" name="corr" data-i18n="[label]annotations.correction" label="Correction"/>
+                                    <div class="annotation-form sic">
+                                        <paper-input name="corr" data-i18n="[label]annotations.correction" label="Correction"/>
+                                        <paper-dropdown-menu name="ana" label="ana" type="note">
+                                            <paper-listbox slot="dropdown-content" selected="1">
+                                                <paper-item>formularz</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
                                     <paper-input class="annotation-form abbreviation" name="expan" data-i18n="[label]annotations.expansion" label="Expansion"/>
                                     <paper-input class="annotation-form reg" name="reg" data-i18n="[label]annotations.reg" label="Regularization"/>
                                     <div class="annotation-form edit">
