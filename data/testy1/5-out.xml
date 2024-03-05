@@ -1,0 +1,60 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="en">
+      <fileDesc>
+         <titleStmt>
+            <title>5</title>
+            <author>Monumenta Vaticana</author>
+         </titleStmt>
+         <editionStmt><edition>Wersja cyfrowa tekstu</edition></editionStmt>
+         <publicationStmt>
+            <publisher>Centrum Studiów Mediewistycznych</publisher>
+            <pubPlace>
+               <placeName>Lublin</placeName>
+            </pubPlace>
+            <date/>
+            <availability status="free">
+               <licence>CC BY-NC-ND</licence>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Monumenta Vaticana res gestes Polonicas Illustrantia</title>
+         </seriesStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <msName type="oryginał">or.: APWr, Rep. 66, nr 292 (291 b). </msName>
+               </msIdentifier>
+               <msContents>
+                  <msItem>
+                     <note>error_not_found</note>
+                  <bibl type="none">error_not_found</bibl>
+                        </msItem>
+               </msContents>
+            </msDesc>
+            <listPerson>
+               <person/>
+            </listPerson>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <abstract>
+         <p>Papież Urban VI, na prośbę mistrza i braci szpitala ubogich w Kaliszu, poleca oficjałowi wrocławskiemu, by zatroszczył się o zwrot temuż szpitalowi dóbr nieprawnie wyzbytych.</p>
+            </abstract>
+         <textClass/>
+         <creation>
+            <date>19 februarii 1382</date>
+            <placeName ana="Rzym">Roma</placeName>
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <!-- tutaj trzeba oddać znacznikami nieustandaryzowanymi formatowanie tekstu i takze przypisy. Problem jest taki, że MDK konsekwentnie nie wykorzystywa "stylów", więc trzeba wymyślić, jak wyciągnąć, formatowanie bez stylów (jeśli coś jest kursywą, to w stylach jest to jako tekst normalny - chociaż w formatowaniu jest kursywa, albo pomniejszenie). To jest bardzo ważne. NIE MOŻEMY ZGUBIĆ FORMATOWANIA!!!Tzn. tam gdzie jest kursywa w docx powinien być zaznaczony tag <kursywa>, przypisy można dać w miejscu, gdzie występiuja w tekście w znaczniku <przypis>. Jeśli by się tego nie dało, to można je też dać na końcu, ale wolałbym mieć w miejscu, gdzie występują. -->
+      <body>
+         <div type="doc">
+            <section type="text">
+                    <persName ref="va-Q32"><persName ref="gnd-139890289">Urbanus</persName> episcopus, servus servorum Dei</persName> , dilecto filio . . <affiliation ref="va-Q45">officiali Wratislauiensi</affiliation> salutem et apostolicam benedictionem . Dilectorum filiorum . . <orgName ref="va-Q41">
+                        <affiliation ref="va-Q43">magistri</affiliation> et fratrum hospitalis pauperum Sancti Spiritus Kaliciensis, Gneznensis diocesis</orgName>, precibus inclinati, presentium tibi auctoritate mandamus, quatinus ea, que de bonis <orgName ref="va-Q41">ipsius hospitalis</orgName> alienata inveneris illicite vel distracta, ad ius et proprietatem <orgName ref="va-Q41">eiusdem hospitalis</orgName> legitime revocare procures, contradictores per censuram ecclesiasticam appellacione postposita compescendo. Testes autem, qui fuerint nominati, si se gracia, odio vel timore subtraxerint, censura <pb/>simili appellacione cessante compellas veritati testimonium<handShift/>perhibere.</section><section type="formularz"> Datum <placeName ref="va-Q31">Rome apud Sanctum Petrum</placeName>, <date when="1382-02-19">XI kal. marcii, pontificatus nostri anno quarto</date>.</section>
+         </div>
+      </body>
+   </text>
+</TEI>

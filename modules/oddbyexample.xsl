@@ -4,7 +4,7 @@
     See the file COPYING.txt for details
     $Date$
     $Id$
---><xsl:stylesheet xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:n="www.example.com" exclude-result-prefixes="rng tei n" xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
+--><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:n="www.example.com" exclude-result-prefixes="rng tei n" xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
   <!--
 This software is dual-licensed:
 

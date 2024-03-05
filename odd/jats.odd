@@ -1,4 +1,4 @@
-<?xml-model href="teipublisher_odds.xsd"?><?teipublisher output="web print epub"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:pb="http://teipublisher.com/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en">
+<?xml-model href="teipublisher_odds.xsd"?><?teipublisher output="web print epub"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:pb="http://teipublisher.com/1.0" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>

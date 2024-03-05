@@ -1,0 +1,62 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="en">
+      <fileDesc>
+         <titleStmt>
+            <title>4</title>
+            <author>Monumenta Vaticana</author>
+         </titleStmt>
+         <editionStmt>
+            <edition>Wersja cyfrowa tekstu</edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Centrum Studiów Mediewistycznych</publisher>
+            <pubPlace>
+               <placeName>Lublin</placeName>
+            </pubPlace>
+            <date/>
+            <availability status="free">
+               <licence>CC BY-NC-ND</licence>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Monumenta Vaticana res gestes Polonicas Illustrantia</title>
+         </seriesStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <msName type="oryginał">or.: APWr, Dokumenty miasta Wrocławia, nr 661. </msName>
+               </msIdentifier>
+               <msContents>
+                  <msItem>
+                     <note>(insert w dokumencie legata Pileo di Prata z 8 III 1382 r., zob. niżej nr ......)</note>
+                  <bibl type="none">ed.: Urkundenbuch der Bistums Breslau, nr ......</bibl>
+                        </msItem>
+               </msContents>
+            </msDesc>
+            <listPerson>
+               <person/>
+            </listPerson>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <abstract>
+         <p>Papież Urban VI poleca kardynałowi Pileo di Prata, legatowi Stolicy Apostolskiej, by tymczasowo uchylił interdykt, nałożony na miasto Wrocław przez papieskiego administratora diecezji w związku z konfliktem między kapitułą katedralną a władzami miejskimi. Konflikt wybuchł po konfiskacie należącego do kanoników piwa i zaostrzył się, gdy popierający miasto król rzymski Wacław Luksemburski wypędził z Wrocławia niektórych duchownych. Kardynał ma szczegółowo poinformować Stolicę Apostolską o przebiegu sporu, a także podjąć pertraktacje z królem Wacławem, w celu doprowadzenia do ugody między zwaśnionymi stronami. Legat otrzymał też władzę całkowitego zdjęcia interdyktu, gdyby taką ugodę zawarto, oraz do zdjęcia kar ekskomuniki z osób, które popadły w nie w czasie trwania konfliktu.</p>
+            </abstract>
+         <textClass/>
+         <creation>
+            <date>13 augusti 1381</date>
+            <placeName ana="Rzym">Roma</placeName>
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <!-- tutaj trzeba oddać znacznikami nieustandaryzowanymi formatowanie tekstu i takze przypisy. Problem jest taki, że MDK konsekwentnie nie wykorzystywa "stylów", więc trzeba wymyślić, jak wyciągnąć, formatowanie bez stylów (jeśli coś jest kursywą, to w stylach jest to jako tekst normalny - chociaż w formatowaniu jest kursywa, albo pomniejszenie). To jest bardzo ważne. NIE MOŻEMY ZGUBIĆ FORMATOWANIA!!!Tzn. tam gdzie jest kursywa w docx powinien być zaznaczony tag <kursywa>, przypisy można dać w miejscu, gdzie występiuja w tekście w znaczniku <przypis>. Jeśli by się tego nie dało, to można je też dać na końcu, ale wolałbym mieć w miejscu, gdzie występują. -->
+      <body>
+         <div>
+            <p>	
+                        <persName ref="va-Q32">Urbanus</persName>
+                     episcopus, servus servorum Dei, dilecto filio <persName ref="va-Q38">Pileo, tt. sancte Praxedis presbytero cardinali</persName>, Apostolice Sedis nuntio, salutem et apostolicam benedictionem. Ex suscepte servitutis officio curis assiduis augimur | et continua meditatione pulsamur, ut christifidelium animarum periculis ac litibus et scandalis subiectorum quantum cum Deo possumus salubriter obviemus. Cum itaque – sicut nuper accepimus – olim inter dilectos filios <orgName ref="va-Q62">capitulum ecclesie | Wratislauiensis</orgName> ex parte una et consules, scabinos, iuratos et commune <settlement ref="va-Q3">civitatis Wratislauiensis</settlement> super eo, quod predicti <orgName ref="va-Q62">capitulum</orgName> eis per prefatos consules, scabinos, iuratos et commune seu eorum officiales vel alios de ipsorum | mandato seu ratihabitione nonnulla vasa cervisie subtracta et ablata et nonnulla alia dampna illata et certas alias iniurias irrogatas fuisse contra privilegia et libertates predicte ecclesie in ipsorum <orgName ref="va-Q62">capituli</orgName> preiudicium et gravamen, consules vero et scabini ac iurati et commune premissa non esse vera asserebant ex altera, orta fuisset materia questionis, tandem administrator dicte ecclesie auctoritate apostolica deputatus ad instantiam dictorum <orgName ref="va-Q62">capituli</orgName> predictam civitatem supposuit ecclesiastico interdicto et inibi cessari fecit penitus a divinis, propter quod carissimus in Christo filius noster <persName ref="va-Q40">Wenceslaus, rex Roman(orum) et Boemie illustris</persName>, contra prefatos <orgName ref="va-Q62">capitulum</orgName> et nonnullos singulares <orgName ref="va-Q56">canonicos dicte ecclesie</orgName>, qui – ut ipse rex dicebat – nonnullos contra ipsum regem excessus commiserant, nonmodicum indignatus, quosdam ex <orgName ref="va-Q56">canonicis</orgName> et aliis personis ecclesiasticis secularibus et regularibus dictarum ecclesie et <settlement ref="va-Q3">civitatis</settlement> ac diocesis Wratislauien(sium) ad instigationem consulum, scabinorum, iuratorum et communis predictorum de predicta <settlement ref="va-Q3">civitate</settlement> dicitur eiecisse seu fugasse, et nonnulla alia lites ac scandala inter prefatos <orgName ref="va-Q62">capitulum</orgName> et personas ecclesiasticas ex parte una et regem ac consules, scabinos, iuratos et commune predictos ex altera exorta fuerunt, et nisi cito super premissis de aliquo salubri provideatur remedio, maiora pericula et scandala exoriri verisimiliter formidantur. Nos igitur cupientes, prout ex debito tenemur pastoralis officii huiusmodi periculis et scandalis obviare ac de tua prudentia et circunspectione specialem in Domino fiduciam obtinentes sub spe pacis et concordie inter partes predictas celerius reformande, volumus et presentium tenore tibi deest in cop. committimus et mandamus, quatinus tam predictum, quam etiam quodcunque aliud interdictum ecclesiasticum, cui predicta <settlement ref="va-Q3">civitas</settlement> sive a iure sive ab homine sit supposita, auctoritate nostra usque ad certum tempus, de quo tibi videbitur, prorsus amoveas ac relaxes, dum tamen ante omnia <orgName ref="va-Q56">canonici</orgName>, <orgName ref="va-Q62">capitulum</orgName> ac alie persone predicte ac ecclesia ipsa reponantur et reducantur in pristinum statum saltem, in quo erant tempore obitus clare memorie Caroli, Roman(orum) imperatoris, genitoris prefati <persName ref="va-Q40">regis</persName>, et per predictos prefatos in cop. consules, scabinos, iuratos et commune sufficiens et ydonea cautio prestetur de non molestando, turbando aut inquietando <orgName ref="va-Q56">canonicos</orgName> et personas vel <orgName ref="va-Q62">capitulum</orgName> aut ecclesiam predictos, sed quod ipsi consules, scabini, iurati et commune eos conservabunt et manutenebunt in ea libertate et in eo statu, in quo fuerunt tempore huiusmodi obitus predicti imperatoris. Cause autem et questiones huiusmodi eciam dampnorum et iniuriarum per viam concordie si fieri poterit alioquin iudicio terminentur. Et nichilominus de huiusmodi excessibus – quos idem rex asserit – per dictos <orgName ref="va-Q56">canonicos</orgName> et personas contra ipsum fore commissos te diligenter informes et ea, que per informacionem huiusmodi reppereris, nobis referre procures cum intendamus acriter punire quoscunque culpabiles reppererimus in premissis. Volumus insuper, quod tu et dictus <persName ref="va-Q40">rex</persName> de premissis discordiis, que inter<orgName ref="va-Q56"> canonicos</orgName> et <orgName ref="va-Q62">capitulum</orgName> predictos ex parte una et consules, scabinos, iuratos et commune prefatos ex altera pendent, amicabiliter componatis, ut eas si fieri possit laudabili concordia terminetis. Alioquin tu de meritis causarum ipsarum diligenter te informes et huiusmodi causas sufficienter instructas ad nostrum et Apostolice Sedis remittas examen prefigendo utrique parti certum peremptorium terminum competentem, quo per se vel procuratores ydoneos nostro se conspectui representent super premissis facture et recepture, quod iustitia suadebit. Nostre tamen intentionis existit, quod si per prefatos consules, scabinos, iuratos et commune forsan steterit quominus inter ipsos et <orgName ref="va-Q56">canonicos</orgName> ac <orgName ref="va-Q62">capitulum</orgName> predictos super premissis concordia fiat, prefata <settlement ref="va-Q3">civitas</settlement> post lapsum huiusmodi temporis usque deest in cop. ad quod tu, ut prefertur, interdictum prefatum amovebis et relaxabis, interdicta remaneat sicut prius; si vero per prefatos<orgName ref="va-Q56"> canonicos</orgName> et <orgName ref="va-Q62">capitulum</orgName> remaneret, quominus huiusmodi concordia fiat, volumus, quod huiusmodi interdictum omnino relaxes. Et insuper tibi absolvendi auctoritate nostra in forma ecclesie consueta, tam regem ipsum, quam quoscunque alios, qui premissorum occasione excommunicationis sententiam forsitan incurrerunt, si hoc humiliter petierint, plenam et liberam concedimus tenore presentium facultatem. Volumus autem, quod quamprimum prefati <orgName ref="va-Q56">canonici</orgName> et <orgName ref="va-Q62">capitulum</orgName> ac persone predicte ecclesie ad pristinum statum, ut premittitur, fuerint restituti, reliquie et ornamenta predicte ecclesie, que – ut asseritur – per ipsos exinde asportata fuerunt, ad eandem ecclesiam reportentur et iudicium <orgName ref="va-Q62">capitul</orgName>i predictorum, quod longe a predicta ecclesia propter huiusmodi discordiam teneri dicitur, apud eandem ecclesiam more solito teneatur. Datum <placeName ref="va-Q31">Rome apud Sanctum Petrum</placeName>, <date when="1381-08-13">idus augusti, pontificatus nostri anno quarto</date>.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

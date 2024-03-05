@@ -41,6 +41,9 @@ declare function idx:get-metadata($root as element(), $field as xs:string) {
                 $root/dbk:info/dbk:author,
                 root($root)//article-meta/contrib-group/contrib/name
             )
+            case "qid" return (
+                number(substring-after($header//tei:fileDesc/tei:publicationStmt/tei:idno, "Q"))
+            )
             case "language" return
                 head((
                     $header//tei:langUsage/tei:language/@ident,

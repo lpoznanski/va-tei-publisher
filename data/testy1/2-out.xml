@@ -1,0 +1,62 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="en">
+      <fileDesc>
+         <titleStmt>
+            <title>2</title>
+            <author>Monumenta Vaticana</author>
+         </titleStmt>
+         <editionStmt><edition>Wersja cyfrowa tekstu</edition></editionStmt>
+         <publicationStmt>
+            <publisher>Centrum Studiów Mediewistycznych</publisher>
+            <pubPlace>
+               <placeName>Lublin</placeName>
+            </pubPlace>
+            <date/>
+            <availability status="free">
+               <licence>CC BY-NC-ND</licence>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Monumenta Vaticana res gestes Polonicas Illustrantia</title>
+         </seriesStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <msName type="oryginał">or.: APWr, Rep. 91, nr 352 (360). </msName>
+               </msIdentifier>
+               <msContents>
+                  <msItem>
+                     <note>error_not_found</note>
+                  <bibl type="none">error_not_found</bibl>
+                        </msItem>
+               </msContents>
+            </msDesc>
+            <listPerson>
+               <person/>
+            </listPerson>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <abstract>
+         <p>Papież Urban VI, na suplikę klasztoru, poleca trzem wymienionym egzekutorom, by karami kościelnymi zmusili księcia oleśnickiego Konrada II, jego syna i ich wspólników, żeby zezwolili konwentowi cystersów w Lubiążu otoczyć klasztor murem, dla ochrony przed napadami wrogów.</p>
+            </abstract>
+         <textClass/>
+         <creation>
+            <date>15 februarii 1381</date>
+            <placeName ana="Rzym">Roma</placeName>
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <!-- tutaj trzeba oddać znacznikami nieustandaryzowanymi formatowanie tekstu i takze przypisy. Problem jest taki, że MDK konsekwentnie nie wykorzystywa "stylów", więc trzeba wymyślić, jak wyciągnąć, formatowanie bez stylów (jeśli coś jest kursywą, to w stylach jest to jako tekst normalny - chociaż w formatowaniu jest kursywa, albo pomniejszenie). To jest bardzo ważne. NIE MOŻEMY ZGUBIĆ FORMATOWANIA!!!Tzn. tam gdzie jest kursywa w docx powinien być zaznaczony tag <kursywa>, przypisy można dać w miejscu, gdzie występiuja w tekście w znaczniku <przypis>. Jeśli by się tego nie dało, to można je też dać na końcu, ale wolałbym mieć w miejscu, gdzie występują. -->
+      <body>
+         <div type="doc">
+         <section type="text">
+                    <persName ref="va-Q32">Urbanus episcopus, servus servorum Dei</persName>, dilectis filiis . . abbati sancti Blasii de Urbe et . . in Glacz, per <app>
+                        <lem>prepositum</lem>
+                        <rdg wit="or.">słowo na razurze</rdg>
+                    </app>  soliti gubernari, | Pragensis diocesis, monasteriorum ac . . ecclesie Brandeburgensis prepositis salutem et apostolicam benedictionem. Iustis et honestis supplicum votis libenter annuimus illaque, quan|tum cum Deo <district>possumus</district>, favoribus prosequimur oportunis. Exhibita siquidem nobis nuper pro parte dilectiorum filliorum . . <orgName ref="va-Q36">abbatis et conventus mo|nasterii in Lubens, Cisterciensis ordinis, Wratislauiensis diocesis</orgName>, peticio continebat, quod dilecti filii nobiles viri <persName ref="va-Q34">Conradus dux Slesie</persName> et Conradus eius filius, domicellus dicte diocesis, pretendentes se patrones predicti <orgName ref="va-Q36">monasterii</orgName>, cum nonnullis eorum in hac parte complicibus indebite ac de facto impedire presumunt, quominus iidem <orgName ref="va-Q36">abbas et conventus</orgName> prefatum monasterium muris circundare et alias claudere possint septa eiusdem monasterii, ut ipsi <orgName ref="va-Q36">abbas et conventus</orgName> ab incursibus malignorum et perversorum hostium insultibus valeant se tueri, in animarum ipsorum ducis et eius filii periculum et predictorum <orgName ref="va-Q36">abbatis et conventus</orgName> ac monasterii nonmodicum preiudicium ac gravamen. Quare pro parte ipsorum abbatis et conventus fuit nobis humiliter supplicatum, ut providere eis super hoc de oportuno remedio dignaremur. Nos igitur huiusmodi supplicationibus inclinati, discretioni vestre per apostolica scripta mandamus, quatinus vos vel duo aut unus vestrum per vos vel alium seu alios prefatos <persName ref="va-Q34">ducem</persName> ac eius filium et complices, ut per eosdem <orgName ref="va-Q36">abbatem et conventum</orgName> seu eorum procuratores prefatum monasterium muris circundari et claudi ac firmari libere ac taliter permittant, absque tamen preiudicio alicuius Fragment: „libere ac taliter permittant absque tamen preiudicio alicuius” napisany drobniejszymi literami na razurze., quod <orgName ref="va-Q36">abbas et conventus</orgName> predicti ac alii infra septa eiusdem monasterii habitantes et commorantes pro tempore possint inibi tute ac tranquille morari et habitare, monitione premissa per censuram ecclesiasticam appellatione remota Słowo napisane na dłuższej razurze, której pozostałą część wypełnia pozioma kreska. compellatis, contradictores auctoritate nostra appellatione postposita compescendo, non obstante, si prefatis duci ac eius filio et complicibus vel quibusvis aliis communiter vel divisim a Sede [Apostolica] sit indultum, quod interdici, suspendi vel excommunicari aut ad iudicium evocari non possint per litteras apostolicas non facientes plenam et expressam ac d[e verbo] ad verbum de indulto huiusmodi mentionem.</section><section type="formularz"> Datum <placeName ref="va-Q31">Rome apud Sanctum Petrum</placeName>, <date when="1381-03-15">XV kal. martii, pontificatus nostri anno tertio</date>.</section>
+         </div>
+      </body>
+   </text>
+</TEI>

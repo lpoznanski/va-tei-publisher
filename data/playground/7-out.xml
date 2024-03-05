@@ -1,0 +1,60 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="en">
+      <fileDesc>
+         <titleStmt>
+            <title>7</title>
+            <author>Monumenta Vaticana</author>
+         </titleStmt>
+         <editionStmt>
+            <edition>Wersja cyfrowa tekstu</edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Centrum Studiów Mediewistycznych</publisher>
+            <pubPlace>
+               <placeName>Lublin</placeName>
+            </pubPlace>
+            <date/>
+            <availability status="free">
+               <licence>CC BY-NC-ND</licence>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Monumenta Vaticana res gestes Polonicas Illustrantia</title>
+         </seriesStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <msName type="kopia">cop.: ASV, Reg. Lat., vol. 45, f. 198v</msName>
+               </msIdentifier>
+               <msContents>
+                  <msItem>
+                     <note>error_not_found</note>
+                  <bibl type="none">reg.: MVB 5, nr 1133</bibl>
+                        </msItem>
+               </msContents>
+            </msDesc>
+            <listPerson>
+               <person/>
+            </listPerson>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <abstract>
+         <p>Papież Bonifacy IX zezwala Marcinowi z Pragi, kanonikowi kolegiaty Św. Krzyża we Wrocławiu, na wybór własnego spowiednika, który będzie mógł udzielać mu absolucji od grzechów niezastrzeżonych dla Stolicy Apostolskiej.</p>
+            </abstract>
+         <textClass/>
+         <creation>
+            <date>11 aprilis 1397</date>
+            <placeName ana="Rzym">Roma</placeName>
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <!-- tutaj trzeba oddać znacznikami nieustandaryzowanymi formatowanie tekstu i takze przypisy. Problem jest taki, że MDK konsekwentnie nie wykorzystywa "stylów", więc trzeba wymyślić, jak wyciągnąć, formatowanie bez stylów (jeśli coś jest kursywą, to w stylach jest to jako tekst normalny - chociaż w formatowaniu jest kursywa, albo pomniejszenie). To jest bardzo ważne. NIE MOŻEMY ZGUBIĆ FORMATOWANIA!!!Tzn. tam gdzie jest kursywa w docx powinien być zaznaczony tag <kursywa>, przypisy można dać w miejscu, gdzie występiuja w tekście w znaczniku <przypis>. Jeśli by się tego nie dało, to można je też dać na końcu, ale wolałbym mieć w miejscu, gdzie występują. -->
+      <body>
+         <div>
+            <p>	Bonifacius etc., dilecto filio Martino Marssonis de Praga, canonico ecclesie Sancte Crucis Wratislauiensis, salutem etc. Benigno etc. [Hinc est, quod nos .... tibi auctoritate apostolica indulgemus, ut aliquem .... presbyterum in tuum possis eligere confessorem, qui, quotiens tibi fuerit oportunum, confessionibus tuis diligenter auditis pro commissis debitam tibi absolucionem impendat et iniungat penitenciam salutarem, nisi forsan talia fuerint propter que Sedes Apostolica sit merito consulenda. ....] Datum Rome apud Sanctum Petrum, tercio idus aprilis, anno octavo. [alia manu:] N(icolaus). X. de Ben(even)to.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

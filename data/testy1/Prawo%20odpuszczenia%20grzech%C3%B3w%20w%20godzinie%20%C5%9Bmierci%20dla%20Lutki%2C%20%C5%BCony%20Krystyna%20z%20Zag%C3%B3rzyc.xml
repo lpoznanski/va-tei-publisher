@@ -1,0 +1,38 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Prawo odpuszczenia grzechów w godzinie śmierci dla Lutki, żony Krystyna z
+               Zagórzyc</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Bulla Bonifacego IX z 4 stycznia 1394</p>
+            <p>transza1</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>AAV, Reg. Lat., vol. 34, f. 172v</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <abstract>
+            <p> Papież Bonifacy IX przyznaje Lutce, żonie Krystyna z Zagórzyc, łaskę, by w obliczu
+               śmierci wybrany przez nią spowiednik mógł jeden raz udzielić jej mocą władzy
+               apostolskiej pełnego odpuszczenia grzechów, pod określonymi warunkami. </p>
+         </abstract>
+         <textClass ana="bulla"/>
+         <creation>
+            <date when="1394-01-04">4 ianuarii 1394</date>
+            <placeName ana="Rzym">Roma</placeName>
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p><persName ref="va-Q10">Bonifacius</persName> etc., dilecte in Christo filie <persName ref="va-Q436">Luthke, dilecti filii Cristini de Zageizicze
+            uxori, <region ref="va-Q372">Cracouiensis diocesis</region></persName>, salutem etc. Provenit <choice><sic>etc.</sic><corr>Hinc est, quod nos ...., ut confessor tuus, quem duxeris eligendum, omnium peccatorum tuorum, .... semel tantum in mortis articulo plenam remissionem tibi .... auctoritate apostolica concedere valeat, devocioni tue tenore presencium indulgemus; sic tamen, quod ....</corr></choice>  Datum <placeName ref="va-Q31">Rome apud
+            Sanctum Petrum</placeName>, <date when="1394-01-04">secundo non. ianuarii, anno quinto</date>. <handShift/><note type="document_fee"><persName ref="va-Q30">N(icolaus). XIIII. de
+            Ben(even)to</persName>.</note></p>
+      </body>
+   </text>
+</TEI>

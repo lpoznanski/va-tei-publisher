@@ -74,13 +74,16 @@
 .tei-head5 { font-weight: bold; }
 .tei-speaker { font-style:italic; }
 .tei-unclear:after { content: ' [?] '; }
-.tei-title5 { font-style: italic; }
-.tei-title7 { font-style: italic; }
-.tei-title9 { font-style: italic; }
-.tei-title11 { font-style: italic; }
+.tei-title6 { font-style: italic; }
+.tei-title8 { font-style: italic; }
+.tei-title10 { font-style: italic; }
+.tei-title12 { font-style: italic; }
 .tei-corr2:before { content: '['; }
 .tei-corr2:after { content: ']'; }
 .tei-foreign { font-style:italic; }
+.tei-titleStmt8 { padding-top: 20px; font-weight: bold; }
+.tei-titleStmt9 { font-size: 80%; }
+.tei-titleStmt11 { font-style: italic; padding-left: 20px; padding-right: 20px; }
 .tei-sic2:before { content: '{'; }
 .tei-sic2:after { content: '}'; }
 .tei-quote1:before { content: '‘'; }

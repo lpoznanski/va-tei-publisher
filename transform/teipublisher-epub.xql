@@ -382,7 +382,7 @@ declare function model:apply($config as map(*), $input as node()*) {
                         html:inline($config, ., ("tei-time", css:map-rend-to-class(.)), .)
                     case element(title) return
                         if ($parameters?header='short') then
-                            html:heading($config, ., ("tei-title1", "docTitle", css:map-rend-to-class(.)), ., 5)
+                            html:heading($config, ., ("tei-title1", css:map-rend-to-class(.)), ., 5)
                         else
                             if (parent::titleStmt/parent::fileDesc) then
                                 (
@@ -440,11 +440,12 @@ declare function model:apply($config as map(*), $input as node()*) {
                                 (
                                     html:link($config, ., ("tei-titleStmt4", css:map-rend-to-class(.)), title[1], $parameters?doc, (), map {}),
                                     epub:block($config, ., ("tei-titleStmt5", css:map-rend-to-class(.)), subsequence(title, 2)),
-                                    epub:block($config, ., ("tei-titleStmt6", css:map-rend-to-class(.)), author)
+                                    epub:block($config, ., ("tei-titleStmt6", css:map-rend-to-class(.)), author),
+                                    epub:block($config, ., ("tei-titleStmt7", css:map-rend-to-class(.)), ../publicationStmt/idno)
                                 )
 
                             else
-                                epub:block($config, ., ("tei-titleStmt7", css:map-rend-to-class(.)), .)
+                                epub:block($config, ., ("tei-titleStmt8", css:map-rend-to-class(.)), .)
                     case element(trailer) return
                         epub:block($config, ., ("tei-trailer", css:map-rend-to-class(.)), .)
                     case element(unclear) return

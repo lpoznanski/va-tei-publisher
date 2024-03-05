@@ -189,7 +189,8 @@
     "language": "Language",
     "feature": "Feature",
     "form": "Form",
-    "period": "Period"
+    "period": "Period",
+    "qid": "Q values"
   },
   "appgen": {
     "account": {

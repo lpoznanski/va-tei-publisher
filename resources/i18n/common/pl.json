@@ -54,6 +54,7 @@
     "items_plural": "Znaleziono {{count}} rezultatów",
     "title": "Tytuł",
     "author": "Autor",
+    "qid": "Id",
     "modificationDate": "Data ostatniej modyfikacji",
     "file": "Nazwa pliku",
     "delete": "Usuń",
@@ -170,7 +171,8 @@
   "facets": {
     "show": "Pokaż top 50",
     "genre": "Gatunek",
-    "language": "Język"
+    "language": "Język",
+    "qid": "Id"
   },
   "appgen": {
     "account": {

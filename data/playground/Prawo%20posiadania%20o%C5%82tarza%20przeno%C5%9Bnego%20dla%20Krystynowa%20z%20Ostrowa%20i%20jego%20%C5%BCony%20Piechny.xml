@@ -1,0 +1,44 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Prawo posiadania ołtarza przenośnego dla Krystynowa z Ostrowa i jego żony
+               Piechny</title>
+
+         </titleStmt>
+         <publicationStmt>
+            <p>Bulla Bonifacego IX z dnia 31 marca 1394</p>
+            <p>transza3</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>AAV, Reg. Lat., vol. 34, f. 216r</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <abstract>
+            <p>Papież Bonifacy IX udziela szlachetnemu Krystynowi z Ostrowa i jego żonie Piechnie przywileju posiadania ołtarza przenośnego.</p>
+         </abstract>
+         <textClass ana="bulla"/>
+         <creation>
+            <date when="1394-03-31">31 martii 1394</date>
+            <placeName ana="Rzym">Roma</placeName>
+         </creation>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>
+                <persName ref="va-Q10">Bonifacius</persName> etc., dilecto filio nobili viro <persName ref="va-Q455">Cristino heredi de Ostrow militi et dilecte
+            in Christo filie nobili mulieri Pechine, eius uxori, <region ref="va-Q372">Cracouiensis diocesis</region>
+                </persName>, salutem etc.
+            Sincere <choice>
+                    <sic>etc.</sic>
+                    <corr>Hinc est, quod nos ...., ut liceat vobis et cuilibet vestrum habere altare portatile .... devocioni vestre tenore presencium indulgemus.</corr>
+                </choice>  Datum <placeName ref="va-Q31">Rome apud Sanctum
+            Petrum</placeName>, <date when="1394-03-31">II kal. aprilis, anno quinto</date>. <handShift/>
+                <handShift/> <note type="document_fee" place="in_line">
+                    <persName ref="va-Q30">N(icolaus). X. de Ben(even)to</persName>.</note> </p>
+      </body>
+   </text>
+</TEI>

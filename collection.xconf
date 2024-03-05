@@ -6,11 +6,13 @@
                 <!--ignore qname="tei:div"/-->
                 <field name="title" expression="nav:get-metadata(ancestor::tei:TEI, 'title')"/>
                 <field name="author" expression="nav:get-metadata(ancestor::tei:TEI, 'author')"/>
+                <field name="qid" expression="nav:get-metadata(ancestor::tei:TEI, 'qid')"/>
                 <field name="language" expression="nav:get-metadata(ancestor::tei:TEI, 'language')"/>
                 <field name="date" expression="nav:get-metadata(ancestor::tei:TEI, 'date')"/>
                 <field name="file" expression="util:document-name(.)"/>
                 <field name="text" expression="."/>
                 <facet dimension="genre" expression="nav:get-metadata(ancestor::tei:TEI, 'genre')" hierarchical="yes"/>
+                <facet dimension="qid" expression="nav:get-metadata(ancestor::tei:TEI, 'qid')"/>
                 <facet dimension="language" expression="nav:get-metadata(ancestor::tei:TEI, 'language')"/>
                 <facet dimension="feature" expression="nav:get-metadata(ancestor::tei:TEI, 'feature')"/>
                 <facet dimension="form" expression="nav:get-metadata(ancestor::tei:TEI, 'form')"/>
@@ -32,6 +34,7 @@
             <text qname="dbk:article">
                 <field name="dbk.title" expression="nav:get-metadata(., 'title')"/>
                 <field name="dbk.author" expression="nav:get-metadata(., 'author')"/>
+                <field name="dbk.qid" expression="nav:get-metadata(., 'qid')"/>
                 <field name="dbk.file" expression="util:document-name(.)"/>
                 <field name="dbk.text" expression="."/>
                 <facet dimension="genre" expression="nav:get-metadata(., 'genre')" hierarchical="yes"/>
@@ -49,6 +52,7 @@
                 <field name="jats.file" expression="util:document-name(.)"/>
                 <field name="jats.title" expression="nav:get-metadata(., 'title')"/>
                 <field name="jats.author" expression="nav:get-metadata(., 'author')"/>
+                <field name="jats.qid" expression="nav:get-metadata(., 'qid')"/>
                 <field name="jats.text" expression="nav:get-metadata(., 'content')"/>
                 <facet dimension="genre" expression="nav:get-metadata(., 'genre')" hierarchical="yes"/>
                 <facet dimension="language" expression="head((./@xml:lang, 'en'))"/>

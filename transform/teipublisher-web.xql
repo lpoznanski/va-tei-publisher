@@ -380,7 +380,7 @@ declare function model:apply($config as map(*), $input as node()*) {
                         html:inline($config, ., ("tei-time", css:map-rend-to-class(.)), .)                        => model:map($node, $trackIds)
                     case element(title) return
                         if ($parameters?header='short') then
-                            html:heading($config, ., ("tei-title1", "docTitle", css:map-rend-to-class(.)), ., 5)                            => model:map($node, $trackIds)
+                            html:heading($config, ., ("tei-title1", css:map-rend-to-class(.)), ., 5)                            => model:map($node, $trackIds)
                         else
                             if (parent::titleStmt/parent::fileDesc) then
                                 (
@@ -438,11 +438,12 @@ declare function model:apply($config as map(*), $input as node()*) {
                                 (
                                     html:link($config, ., ("tei-titleStmt4", css:map-rend-to-class(.)), title[1], $parameters?doc, (), map {})                                    => model:map($node, $trackIds),
                                     html:block($config, ., ("tei-titleStmt5", css:map-rend-to-class(.)), subsequence(title, 2))                                    => model:map($node, $trackIds),
-                                    html:block($config, ., ("tei-titleStmt6", css:map-rend-to-class(.)), author)                                    => model:map($node, $trackIds)
+                                    html:block($config, ., ("tei-titleStmt6", css:map-rend-to-class(.)), author)                                    => model:map($node, $trackIds),
+                                    html:block($config, ., ("tei-titleStmt7", css:map-rend-to-class(.)), ../publicationStmt/idno)                                    => model:map($node, $trackIds)
                                 )
 
                             else
-                                html:block($config, ., ("tei-titleStmt7", css:map-rend-to-class(.)), .)                                => model:map($node, $trackIds)
+                                html:block($config, ., ("tei-titleStmt8", css:map-rend-to-class(.)), .)                                => model:map($node, $trackIds)
                     case element(trailer) return
                         html:block($config, ., ("tei-trailer", css:map-rend-to-class(.)), .)                        => model:map($node, $trackIds)
                     case element(unclear) return

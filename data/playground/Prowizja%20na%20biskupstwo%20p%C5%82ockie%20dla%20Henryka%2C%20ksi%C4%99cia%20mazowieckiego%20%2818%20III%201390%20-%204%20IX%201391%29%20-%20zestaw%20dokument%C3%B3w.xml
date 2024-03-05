@@ -1,0 +1,195 @@
+<teiCorpus>
+    <teiHeader>
+        <p>Prowizja na biskupstwo płockie dla Henryka, księcia mazowieckiego (18 III 1390 - 4 IX 1391) - zestaw dokumentów</p>
+    </teiHeader>
+    <TEI xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title type="label">Bulla Bonifacego IX z dnia 18 marca 1390</title>
+                    <title type="description">Prowizja na biskupstwo płockie dla Henryka, księcia mazowieckiego</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Centrum Studiów Mediewistycznych</publisher>
+                    <date when="2023"/>
+                    <idno>Q477</idno>
+                    <availability>
+                        <licence>CC....</licence>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <listWit>
+                        <witness ana="cop." source="RL_13">AAV, Reg. Lat., vol. 13, f. 155r-157r (or. f. CXXXII-CXXXIIII)<locus scheme="modern">f. 155r-157r</locus><locus scheme="original">f. CXXXII-CXXXIIII</locus>
+                        </witness>
+                    </listWit>
+                    <listBibl type="editions">
+                        <bibl type="edycja">MPV 8, nr 103</bibl>
+                        <bibl type="regest">BP 3, nr 149</bibl>
+                    </listBibl>
+                </sourceDesc>
+            </fileDesc>
+            <profileDesc>
+                <abstract>
+                    <p>Bonifacy IX powołuje Henryka, księcia mazowieckiego, na biskupstwo płockie, wakujące po śmierci biskupa Ścibora z Radzymina.</p>
+                </abstract>
+                <textClass>
+                    <catRef scheme="forma_dokumentu" target="Q402"/> <!-- bulla  -->
+                    <catRef scheme="rodzaj_sprawy" target="Q488"/> <!-- prowizja na beneficjum konsystorskie -->
+                    <catRef scheme="formularz" target="Q489"/> <!-- Apostolatus officium -->
+                </textClass>
+                <creation>
+                    <date when="1390-03-18" when-custom="15 kal. apr., a. p. 1">18 martii 1390</date>
+                    <placeName ref="Q31">Roma, apud Sanctum Petrum</placeName>
+                </creation>
+            </profileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <p>
+                    [m.s.] C(ancellaria)
+                    Bonifacius etc., dilecto filio Henrico, electo Plocensi, salutem etc. Apostolatus officium, quamquam insufficientibus meritis nobis ex Alto commissum, quo ecclesiarum omnium regimini presidemus, utiliter exequi coadiuvante Domino cupientes solliciti corde reddimur et solertes, ut, cum de ipsarum regiminibus agitur committendis, tales eis in pastores preficere studeamus, qui commissum sibi gregem dominicum sciant non solum doctrina verbi sed exemplo boni operis informare commissasque sibi ecclesias in statu pacifico et tranquillo velint et valeant duce Domino salubriter regere et feliciter gubernare. Dudum siquidem bone memorie Stiborio, episcopo Plocensi, regimini Plocensis ecclesie presidente, nos cupientes eidem ecclesie, cum eam vacare contingeret, per operacionis nostre ministerium utilem et ydoneam presidere personam, provisionem eiusdem ecclesie ordinacioni et disposicioni nostre ea vice duximus specialiter reservandam, decernentes extunc irritum et inane, si secus super hiis per quoscunque quavis auctoritate scienter vel ignoranter contingeret attemptari. Postmodum vero prefata ecclesia per obitum eiusdem Stiborii episcopi, qui extra Romanam Curiam diem clausit extremum, pastoris solacio destituta, nos vacacione huiusmodi fidedignis relatibus intellecta .... post deliberacionem, quam .... cum fratribus nostris habuimus diligentem, demum ad te prepositum eiusdem ecclesie in subdiaconatus ordine constitutum, cui de litterarum sciencia, vite mundicia, honestate morum, spiritualium providencia et temporalium circumspectione et aliis virtutum meritis apud nos laudabilia testimonia perhibentur et pro quo eciam dilecti filii capitulum dicte ecclesie per eorum patentes litteras nobis super hoc humiliter supplicarunt, direximus oculos nostre mentis; quibus omnibus attenta meditacione pensatis de persona tua nobis et dictis fratribus ob dictorum tuorum exigenciam meritorum accepta eidem ecclesie de ipsorum fratrum consilio auctoritate apostolica providemus teque illi preficimus in episcopum et pastorem, curam et administracionem ipsius ecclesie tibi in spiritualibus et temporalibus plenarie committendo .... Datum Rome apud Sanctum Petrum, quintodecimo kalendas aprilis, anno primo.
+                    Simili modo: Dilectis filiis capitulo ecclesie Plocensis, salutem etc. Apostolatus officium etc. .... Datum, ut supra.
+                    Eodem modo: Dilectis filiis clero civitatis et diocesis Plocensium, salutem etc. Apostolatus officium etc. .... Datum, ut supra.
+                    Eodem modo: Dilectis filiis <!-- [„Dilecto filio” w Or.] --> populo civitatis et diocesis Plocensium, salutem etc. Apostolatus officium etc. .... Datum, ut supra. 
+                    Simili modo: Dilectis filiis universis vassallis ecclesie Plocensis, salutem etc. Apostolatus officium etc. .... Datum, ut supra.
+                    Simili modo: Venerabili fratri archiepiscopo Gneznensi, salutem etc. Ad cumulum .... Datum, ut supra.
+                    Simili modo: Carissimo in Christo filio Wladislao, regi Polonie illustri salutem etc. Gracie divine premium et humane laudis preconium acquiritur, si per seculares principes prelatis, presertim ecclesiarum cathedralium regimini presidentibus, oportuni favoris presidium et honor debitus impendatur. Sane ecclesia Plocensis bone memorie Stiborio, episcopo Plocensi, regimini Plocensis ecclesie presidente, nos etc. Cum itaque fili carissime sit virtutis opus Dei ministros benigno favore prosequi et eos verbis et operibus pro Regis eterni gloria venerari, serenitatem regiam rogamus et hortamur attente, quatenus eundem electum et prefatam ecclesiam Plocensem sue cure commissam, habens pro nostra et Apostolice Sedis reverencia propensius commendatos, ipsos benigni favoris auxilio prosequaris ita, quod idem electus tue celsitudinis fultus presidio in commissa sibi cura pastoralis officii possit Deo propicio prosperari, ac tibi exinde a Deo perhennis vite premium et a nobis contigua proveniat accio graciarum. Datum, ut supra. [alia manu:] Iac(obus). XXII, XI, XI, XI, XI, XI, XI. de Teram(o).
+                </p>
+            </body>
+        </text>
+    </TEI>
+        <TEI xmlns="http://www.tei-c.org/ns/1.0">
+            <teiHeader>
+                <fileDesc>
+                    <titleStmt>
+                        <title type="label">Zapiska w księdze obligacji Kamery Apostolskiej z dnia 4 września 1391</title>
+                        <title type="description">Obligacja serwicjalna Henryka, ks. mazowieckiego za prowizję na biskupstwo płockie</title>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>Centrum Studiów Mediewistycznych</publisher>
+                        <date when="2023"/>
+                        <idno>Q479</idno>
+                        <availability>
+                            <licence>CC....</licence>
+                        </availability>
+                    </publicationStmt>
+                    <sourceDesc>
+                        <listWit>
+                            <witness ana="cop." source="OS_48">ASV, Cam. Ap., Oblig. et Sol., vol. 48, f. 160v (or. f. CVII)<locus scheme="modern">f. 160v</locus><locus scheme="original">f. CVII</locus>
+                            </witness>
+                        </listWit>
+                        <listBibl type="editions">
+                            <bibl type="edycja">Lis1, nr 47</bibl>
+                        </listBibl>
+                    </sourceDesc>
+                </fileDesc>
+                <profileDesc>
+                    <abstract>
+                        <p>Henryk, ks. mazowiecki, biskup-elekt płocki, przez swojego prokuratora, kanonika płockiego Dadźboga syna Nasięgniewa ze Szczawina, zobowiązuje się zapłacić serwicja swoje oraz zaległe zobowiązania względem Kamery Apostolskiej swoich poprzedników, Ścibora z Radzymina i Dobiesława z Gulczewa. Obligacja w księdze Kamery Apostolskiej.</p>
+                    </abstract>
+                    <textClass>
+                        <catRef scheme="forma_dokumentu" target="Q490"/>
+                        <catRef scheme="rodzaj_sprawy" target="Q488"/>
+                        <catRef scheme="formularz" target="brak"/>
+                    </textClass>
+                    <creation>
+                        <date when="1391-09-04" when-custom="">Lune 4 septembris 1391</date> <!-- pytanie jak rozpisać "custom" dla Anno Nativitatis Domini nostri Ihesu Christi millesimo trecentesimo nonagesimo primo, indiccione quarta decima, pontificatus sanctissimi in Christo patris et domini nostri domini Bonifacii, divina providencia pape noni, anno secundo,  -->
+                        <placeName ref="Q31">Roma, apud Sanctum Petrum</placeName>
+                    </creation>
+                </profileDesc>
+            </teiHeader>
+            <text>
+                <body>
+                    <p>
+                        
+                     
+                        [m.s.] Episcopi Plocensis
+                        
+                        Anno, indiccione, pontificatus, loco, quibus antea [=Anno Nativitatis Domini nostri Ihesu Christi millesimo trecentesimo nonagesimo primo, indiccione quarta decima, pontificatus sanctissimi in Christo patris et domini nostri domini Bonifacii, divina providencia pape noni, anno secundo, in Urbe apud Sanctum Petrum, in thesauraria Apostolice Camere], die vero Lune, quarta mensis septembris, coram prefato reverendissimo in Christo patre et domino domino Marino, miseracione divina Sancte Marie Nove dyacono cardinali, domini pape camerario, presentibus venerabilibus viris dominis Paulo , Baylardino  et Francisco , Camere et Iacobo  Collegii clericis, reverendus pater dominus Henricus, episcopus Plocensis, per dominum Datipegium [!] Nassagnei, canonicum Plocensem, procuratorem suum ad hoc legitime constitutum, promisit Camere et Collegio pro suo communi servicio quatringentos florenos auri de Camera et quinque servicia consueta.
+                        
+                        [m.d.] XVIII cardin(ales)
+                        
+                        Item recognovit Camere et Collegio pro communi servicio domini Stiborii, predecessoris sui , alios similes quatringentos florenos et quinque servicia consueta.
+                        
+                        [m.d.] XX cardin(ales)
+                        
+                        Item recognovit Camere tantummodo pro communi servicio domini Dobeslay, antepredecessoris sui , trecentos sexaginta octo similes florenos et quinque servicia consueta.
+                        
+                        [m.d.] XVIII cardin(ales)
+                        
+                        Solvendo medietatem promissi in festo Pentecosten proxime futuro et aliam medietatem in festo Nativitatis Domini nostri Ihesu Christi extunc proxime secuturo. Et recognita similibus modis et terminis successive. Alioquin etc. Iuravit etc.
+                    
+                        <!--  osoby w dokumencie:   
+  Paulus de Planca de Iuvenaccio, CA clericus, zob. f. 128r.
+  Baylardinus de Lascala de Verona, CA clericus, zob. f. 126r.
+  Franciscus de Palcaria/Palcana/Paleana, CA cler., zob. f. 144r lub Franciscus de Mercatello, CA cler., f. 141r, 159r.
+  Iacobus Werna/Warna, Collegii Cardinalium clericus, zob. f. 138v, 145r
+  Ścibor z Radzymina, bp płocki 1381-1390.
+  Dobiesław z Gulczewa, bp płocki 1375-1381.-->
+                    </p>
+                </body>
+            </text>
+        </TEI>
+    <TEI xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title type="label">Zapiska w księdze obligacji Kamery Kardynałów z dnia 4 września 1391</title>
+                    <title type="description">Obligacja serwicjalna Henryka, ks. mazowieckiego za prowizję na biskupstwo płockie</title>
+                </titleStmt>
+                <publicationStmt>
+                    <publisher>Centrum Studiów Mediewistycznych</publisher>
+                    <date when="2023"/>
+                    <idno>Q482</idno>
+                    <availability>
+                        <licence>CC....</licence>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <listWit>
+                        <witness ana="cop." source="OS_52">ASV, Cam. Ap., Oblig. et Sol., vol. 52, f. 41v (or. f. XXI)<locus scheme="modern">41v</locus><locus scheme="original">f. XXI</locus>
+                        </witness>
+                    </listWit>
+                    <listBibl type="editions">
+                        <bibl type="edycja">Lis1, nr 82</bibl>
+                    </listBibl>
+                </sourceDesc>
+            </fileDesc>
+            <profileDesc>
+                <abstract>
+                    <p>Henryk, ks. mazowiecki, biskup-elekt płocki, przez swojego prokuratora, kanonika płockiego Dadźboga syna Nasięgniewa ze Szczawina, zobowiązuje się zapłacić serwicja swoje oraz zaległe zobowiązania względem Kamery Apostolskiej swoich poprzedników, Ścibora z Radzymina i Dobiesława z Gulczewa. Obligacja w księdze kamery Kolegium Kardynałów.</p>
+                </abstract>
+                <textClass>
+                    <catRef scheme="forma_dokumentu" target="Q490"/>
+                    <catRef scheme="rodzaj_sprawy" target="Q488"/>
+                    <catRef scheme="formularz" target="brak"/>
+                </textClass>
+                <creation>
+                    <date when="1391-09-04" when-custom="">4 septembris 1391</date>
+                    <placeName ref="Q31">Roma, apud Sanctum Petrum</placeName>
+                </creation>
+            </profileDesc>
+        </teiHeader>
+        <text>
+            <body>
+                <p>[m.s.] Electi Procensis
+                    
+                    Anno, indiccione, pontificatus, loco et presentibus, quibus antea [=Anno Nativitatis Domini nostri Ihesu Christi millesimo trecentesimo nonagesimo primo, indiccione quarta decima, pontificatus sanctissimi in Christo patris et domini nostri domini Bonifacii, divina providencia pape noni, anno secundo, coram reverendissimo in Christo patre et domino domino M(arino), miseracione divina tituli Sancte Marie Nove diacono cardinali, domini pape camerario, presentibus reverendis in Christo patribus domino Augustino episcopo Perusino, domini pape thesaurario, domino Francisco episcopo Nolano, venerabilibus viris dominis Paulo de Iuvena(cio), Baiardino de Verona, Apostolice Camere et Iacobo Guarna , Collegii clericis], die quarto [następuje skreślone: dicti] mensis septembris [Nadpisane nad wierszem.] , reverendus in Christo pater dominus Henricus, electus Plocensis, promisit et obligavit se Camere et Collegio per honorabilem virum dominum Datipegium [!] Nassagnei, canonicum ecclesie Plocensis, procuratorem suum ad hoc legitime constitutum, pro communi servicio dicti domini florenos quatringentos et quinque servicia consueta.
+                    
+                    [m.d.] Card(inales) XVIII
+                    
+                    Item recognovit pro domino Stiporio, predecessore suo immediato, alios similes quatringentos florenos et quinque servicia consueta.
+                    
+                    [m.d.] Card(inales) XX
+                    
+                    Item recognovit pro domino Debeslao, suo antepredecessore, florenos trecentos sexaginta octo et quinque servicia consueta.
+                    
+                    [m.d.] Card(inales) XVIII
+                    
+                    Solvendo medietatem promissi in festo Pentecosten proxime futuro et aliam medietatem in festo Nativitatis Domini nostri Ihesu Christi extunc proxime secuturo. Et recognita in similibus terminis [następuje skreślone: Al]  annis revolutis. Alioquin etc. Iuravit etc. R(ecepit) sentencias.
+                </p>
+            </body>
+        </text>
+    </TEI>
+
+</teiCorpus>

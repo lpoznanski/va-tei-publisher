@@ -1,0 +1,48 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title type="label">Bulla papieża Bonifacego IX z dnia 25 września 1394</title>
+               <title type="description">Prowizja na altarię Trzech Króli w kościele parafialnym św. Marii Magdaleny w Poznaniu dla Mikołaja Pletzingera</title>
+            </titleStmt>
+            <publicationStmt>
+               <publisher>Centrum Studiów Mediewistycznych</publisher>
+               <date when="2023"/>
+               <idno>Q483</idno>
+               <availability>
+                  <licence>CC....</licence>
+               </availability>
+            </publicationStmt>
+            <sourceDesc>
+               <listWit>
+                  <witness ana="cop." source="RL_31">AAV, Reg. Lat., vol. 31, f. 190r-190v (or. f. CXCI)<locus scheme="modern">190r-190v</locus><locus scheme="original">CXCI</locus>
+                  </witness>
+               </listWit>
+               <listBibl type="editions">
+                  
+                  <bibl type="regest">BP 3, nr 403</bibl>
+               </listBibl>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <abstract>
+               <p>Papież Bonifacy IX poleca trzem wymienionym egzekutorom, by mocą władzy apostolskiej udzielili Mikołajowi Pletzingerowi, prezbiterowi diecezji poznańskiej, prowizji na altarię Trzech Króli (5 grz.) w kościele parafialnym św. Marii Magdaleny w Poznaniu, pomimo że Mikołaj posiada już papieską ekspektatywę na beneficjum należące do kollacji biskupa i kapituły poznańskiej. Altaria ta została ufundowana przez siostry Małgorzatę, wdowę po Janie Klizie oraz Katarzynę Goldbergową, które na mocy prawa patronatu przedstawiły ordynariuszowi Mikołaja jako kandydata na altarystę, jednak Dobrogost z Nowego Dworu, ówczesny biskup poznański, odmówił jego instytuowania.</p>
+            </abstract>
+            <textClass>
+               <catRef scheme="forma_dokumentu" target="bulla"/>
+               <catRef scheme="rodzaj_sprawy" target="prowizja na beneficjum"/>
+               <catRef scheme="formularz" target="Vite ac morum"/>
+            </textClass>
+            <creation>
+               <date when="1394-09-25" when-custom="7 kl. oct., a. p. 5">25 septembris 1394</date>
+               <placeName ref="Q31">Roma, apud Sanctum Petrum</placeName>
+            </creation>
+         </profileDesc>
+      </teiHeader>
+   <text>
+      <body>
+         <p><persName ref="va-Q10" type="wystawca">Bonifacius</persName> etc., venerabili fratri <affiliation ref="va-Q226" type="odbiorca">episcopo Monopolitano</affiliation> et dilectis filiis <affiliation ref="va-Q500" type="odbiorca">preposito ecclesie Gneznensis</affiliation> ac <affiliation ref="va-Q121" type="odbiorca">officiali Poznaniensi</affiliation> salutem etc. Vite ac morum honestas aliaque laudabilia probitatis et virtutum merita, super quibus apud nos dilectus filius <persName ref="va-Q495" type="beneficjent_laski">Nicolaus dictus Ploczinger, <roleName ref="va-Q67" type="stopien_swiecen">presbyter</roleName> Poznaniensis diocesis</persName>, fidedigno commendatur testimonio, nos inducunt, ut sibi reddamur ad graciam liberales. Dudum siquidem nobis pro parte dilectarum in Christo filiarum <persName ref="va-Q487" type="">Margarete, relicte quondam Iohannis Clise laici, vidue</persName> et <persName ref="va-Q494" type="">Catherine Goltberginne sororum, mulieris, [civium] Poznanien(sium)</persName>, nobis exposito, quod ipse zelo pie devocionis accense, de propria salute cogitantes et cupientes terrena in celestia et transitoria in eterna felici commercio commutare pro suarum ac suorum parentum salute, de bonis eis a Deo collatis unum <affiliation ref="va-Q499" type="przedmiot_nadania"><persName ref="va-Q495" type="beneficjent_laski">altare ad laudem Omnipotentis Dei et sub vocabulo sanctorum Trium Regum in parrochiali ecclesia sancte Marie Magdalene Poznaniensi </persName></affiliation>de consensu et licencia eiusdem ecclesie rectoris fundaverant et erexerant et pro uno rectore ibidem Domino perpetue servituro de certa annua pensione dotaverant, iure patronatus dicti altaris eis et earum successoribus legitimis expresse in perpetuum4 reservato, nos fundacionem, erectionem et dotacionem predictas ratas habentes et gratas, eas per nostras litteras auctoritate apostolica duximus confirmandas, prout in eisdem litteris plenius continetur et deinde, sicut exhibita nobis nuper pro parte dicti Nicolai peticio continebat, licet dicte sorores ipsum Nicolaum ad altare predictum venerabili fratri nostro <persName ref="va-Q496" type="">Dobrogostio, <affiliation ref="va-Q118" type="posiadane_beneficjum">archiepiscopo Gneznensi</affiliation>, tunc <affiliation ref="va-Q89" type="posiadane_beneficjum">Poznaniensi episcopo</affiliation></persName>, legitime presentassent, ipse tamen archiepiscopus, tunc episcopus, eundem Nicolaum in rectorem dicti altaris absque racionabili causa instituere recusavit. Cum autem, sicut accepimus, altare prefatum adhuc vacare noscatur, nos volentes eidem Nicolao premissorum meritorum suorum intuitu graciam facere specialem, discrecioni vestre per apostolica scripta mandamus, quatenus vos vel duo aut unus vestrum per vos vel alium seu alios altare predictum, quod sine cura est cuiusque fructus, redditus et f. 190v<pb/><pb/>proventus <affiliation ref="va-Q499" type=""><measure quantity="5" unit="grz.s.">quinque marcharum argenti secundum communem extimacionem valorem annuum</measure></affiliation>, ut ipse Nicolaus asserit, non excedunt, si, ut prefertur, vacat et tempore date presencium non sit in eo alicui specialiter ius quesitum, cum omnibus iuribus et pertinenciis suis eidem Nicolao auctoritate apostolica conferre et assignare curetis, inducentes eundem Nicolaum vel procuratorem suum eius nomine in corporalem possessionem altaris iuriumque et pertinenciarum predictorum eadem auctoritate et defendentes inductum, amoto exinde quolibet illicito detentore ac facientes ipsum vel dictum procuratorem pro eo ad altare predictum, ut est moris, admitti sibique de ipsius altaris fructibus, redditibus, proventibus, iuribus et obvencionibus universis integre responderi, contradictores auctoritate nostra etc.; non obstantibus, si aliqui super provisionibus sibi faciendis de huiusmodi vel aliis beneficiis ecclesiasticis in illis partibus speciales vel generales Apostolice Sedis vel legatorum eius litteras impetrarint, eciam si per eas ad inhibicionem, reservacionem et decretum vel alias quomodolibet sit processum, quibus omnibus in assecucione dicti altaris predictum Nicolaum volumus anteferri, sed nullum per hoc eis quo ad assecucionem beneficiorum aliorum preiudicium generari; seu si <affiliation ref="va-Q89" type="">episcopo Poznaniensi</affiliation> pro tempore existenti vel quibusvis aliis communiter vel divisim a dicta sit Sede indultum, quod ad recepcionem vel provisionem alicuius minime teneantur et ad id compelli aut quod interdici, suspendi vel excommunicari non possint quodque de huiusmodi vel aliis beneficiis ecclesiasticis ad eorum collacionem, provisionem, presentacionem seu quamvis aliam disposicionem coniunctim vel separatim spectantibus nulli valeat provideri per litteras apostolicas non facientes plenam et expressam ac de verbo ad verbum de indulto huiusmodi mencionem et qualibet alia dicte Sedis indulgencia generali vel speciali, cuiuscunque tenoris existat, per quam presentibus non expressam vel totaliter non insertam effectus huiusmodi nostre gracie impediri valeat quomodolibet vel differri et de qua cuiusque toto tenore habenda sit in nostris litteris mencio specialis; aut quod dudum eidem Nicolao, ut asserit, de beneficio ecclesiastico cum cura vel sine cura, vacante vel vacaturo, ad collacionem, provisionem, presentacionem seu quamvis aliam disposicionem dicti episcopi et dilectorum filiorum prepositi, decani et capituli ecclesie Poznaniensis communiter vel divisim pertinente per alias nostras litteras mandavimus provideri, nos enim ex nunc irritum decernimus et inane, si secus super hiis a quoquam quavis auctoritate scienter vel ignoranter contigerit attemptari. Datum <placeName ref="va-Q31" type="miejsce_wystawienia_dokumentu">Rome apud Sanctum Petrum</placeName>, <date type="document_issued" when="1394-09-25">septimo kal. octobris, anno quinto</date>. <handShift/> <note type="document_fee" place="in_line"><persName ref="va-Q30" type="pracownik_kurii">N(icolaus). <measure quantity="20">XX</measure>. de Ben(even)to</persName>. </note></p>
+      </body>
+   </text>
+</TEI>

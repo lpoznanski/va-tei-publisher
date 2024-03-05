@@ -148,6 +148,12 @@ declare variable $config:facets := [
         }
     },
     map {
+        "dimension": "qid",
+        "heading": "Wartości Q",
+        "max": 15,
+        "hierarchical": false()
+    },
+    map {
         "dimension": "feature",
         "heading": "facets.feature",
         "max": 15,

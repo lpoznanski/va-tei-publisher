@@ -42,6 +42,7 @@ pb-authority-lookup::part(output) {
 
 #authority-info {
     font-size: .9rem;
+    width: 200px !important;
     max-height: 25vh;
     overflow: auto;
 }
